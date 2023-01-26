@@ -76,6 +76,14 @@ ul {
   color: var(--light-grey);
 }
 
+.light-brown {
+  color: var(--light-brown);
+}
+
+.milky-white {
+  color: var(--milky-white);
+}
+
 .darker-grey {
   color: var(--darker-grey);
 }
@@ -100,8 +108,16 @@ ul {
   background: var(--light-grey);
 }
 
-.bg-lighter-grey {
-  background: var(--lighter-grey);
+.bg-light-grey {
+  background: var(--light-grey);
+}
+
+.bg-light-brown {
+  background: var(--light-brown);
+}
+
+.bg-milky-white {
+  background: var(--milky-white);
 }
 
 .bg-white {
