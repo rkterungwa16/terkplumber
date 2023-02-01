@@ -1,6 +1,8 @@
-import cx from "classnames";
-import Link from "next/link";
 import { FC, HTMLAttributes, ReactNode } from "react";
+import Link from "next/link";
+import cx from "classnames";
+
+import { CustomLink } from "../Link";
 import styles from "./styles.module.css";
 
 import {
@@ -56,6 +58,15 @@ export const BaseButton: FC<BaseButtonProps> = ({
     ...disableClass,
   ]);
   if (typeof href !== "undefined") {
+    <CustomLink
+      component={
+        <Link href={href}>
+          <a className={classes} {...props}>
+            {children}
+          </a>
+        </Link>
+      }
+    />;
     return (
       <Link href={href}>
         <a className={classes} {...props}>

@@ -40,7 +40,7 @@ export const CustomLink: FC<CustomLinkProps> = ({
     return cloneElement(component, {
       ...(active && { "aria-current": "page" }),
       ...(disabled && { "aria-disabled": true, tabIndex: -1 }),
-      ...componentProps
+      ...(componentProps && componentProps),
     });
   }
   return (
