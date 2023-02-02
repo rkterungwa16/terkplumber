@@ -490,6 +490,10 @@ p,
   position: absolute;
 }
 
+.Trk__sticky {
+  position: sticky;
+}
+
 .Trk__fixed {
   position: fixed;
 }

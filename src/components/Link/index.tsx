@@ -55,8 +55,8 @@ export const CustomLink: FC<CustomLinkProps> = forwardRef<
       });
     }
 
-    const activeClass = anchorActiveClassName ? [anchorActiveClassName] : [];
-    const disableClass = anchorDisabledClassName
+    const activeClass = active ? [anchorActiveClassName] : [];
+    const disableClass = disabled
       ? [anchorDisabledClassName]
       : [];
     const classes = cx(className, [...activeClass, ...disableClass]);
