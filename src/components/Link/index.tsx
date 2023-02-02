@@ -4,7 +4,10 @@ import {
   cloneElement,
   ReactElement,
   ReactNode,
+  forwardRef,
 } from "react";
+
+import cx from "classnames";
 
 interface CustomAnchorProps {
   active?: boolean;
@@ -25,31 +28,50 @@ interface CustomLinkProps
   componentProps?: ComponentProps;
   children?: ReactNode;
 }
-export const CustomLink: FC<CustomLinkProps> = ({
-  component,
-  componentProps,
-  active,
-  href,
-  disabled,
-  children,
-  anchorActiveClassName,
-  anchorDisabledClassName,
-  ...others
-}) => {
-  if (component) {
-    return cloneElement(component, {
-      ...(active && { "aria-current": "page" }),
-      ...(disabled && { "aria-disabled": true, tabIndex: -1 }),
-      ...(componentProps && componentProps),
-    });
+export const CustomLink: FC<CustomLinkProps> = forwardRef<
+  HTMLAnchorElement,
+  CustomLinkProps
+>(
+  (
+    {
+      component,
+      componentProps,
+      active,
+      href,
+      disabled,
+      children,
+      anchorActiveClassName,
+      anchorDisabledClassName,
+      className,
+      ...others
+    },
+    ref
+  ) => {
+    if (component) {
+      return cloneElement(component, {
+        ...(active && { "aria-current": "page" }),
+        ...(disabled && { "aria-disabled": true, tabIndex: -1 }),
+        ...(componentProps && componentProps),
+      });
+    }
+
+    const activeClass = anchorActiveClassName ? [anchorActiveClassName] : [];
+    const disableClass = anchorDisabledClassName
+      ? [anchorDisabledClassName]
+      : [];
+    const classes = cx(className, [...activeClass, ...disableClass]);
+    return (
+      <a
+        {...others}
+        {...(active && { "aria-current": "page" })}
+        {...(disabled && { "aria-disabled": true, tabIndex: -1 })}
+        className={classes}
+        ref={ref}
+      >
+        {children}
+      </a>
+    );
   }
-  return (
-    <a
-      {...others}
-      {...(active && { "aria-current": "page" })}
-      {...(disabled && { "aria-disabled": true, tabIndex: -1 })}
-    >
-      {children}
-    </a>
-  );
-};
+);
+
+CustomLink.displayName = "CustomLink";

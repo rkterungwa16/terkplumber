@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, ReactNode } from "react";
+import { FC, HTMLAttributes, ReactNode, forwardRef, ForwardedRef } from "react";
 import Link from "next/link";
 import cx from "classnames";
 
@@ -16,7 +16,7 @@ import {
   defaultVariantClasses,
 } from "./constants";
 
-export interface BaseButtonProps
+export interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   type?: ButtonType;
   color?: ButtonColor;
@@ -25,59 +25,74 @@ export interface BaseButtonProps
   colorClassNames: { [color: string]: string };
   sizeClassNames: { [size: string]: string };
   variantClassNames: { [size: string]: string };
-  disablClassName: string;
+  disabledClassName: string;
   href?: string;
   dataId?: string;
   disabled?: boolean;
   children?: ReactNode;
 }
 
-export const BaseButton: FC<BaseButtonProps> = ({
-  type = ButtonType.BUTTON,
-  size = ButtonSize.BASE,
-  variant = ButtonVariant.STANDARD,
-  href,
-  children,
-  color = ButtonColor.DEFAULT,
-  colorClassNames = defaultColorClasses,
-  sizeClassNames = defaultSizeClasses,
-  variantClassNames = defaultVariantClasses,
-  disablClassName = defaultDisabledClass,
-  disabled = false,
-  className = "",
-  ...props
-}) => {
-  const colorClass = colorClassNames[color] ? [colorClassNames[color]] : [];
-  const sizeClass = sizeClassNames[size] ? [sizeClassNames[size]] : [];
-  const variantClass = variantClassNames[variant] ? [sizeClassNames[size]] : [];
-  const disableClass = disablClassName ? [disablClassName] : [];
-  const classes = cx(styles.BaseButton, className, [
-    ...colorClass,
-    ...sizeClass,
-    ...variantClass,
-    ...disableClass,
-  ]);
-  if (typeof href !== "undefined") {
-    <CustomLink
-      component={
-        <Link href={href}>
-          <a className={classes} {...props}>
-            {children}
-          </a>
-        </Link>
-      }
-    />;
+export const Button = forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  ButtonProps
+>(
+  (
+    {
+      type = ButtonType.BUTTON,
+      size = ButtonSize.BASE,
+      variant = ButtonVariant.STANDARD,
+      href,
+      children,
+      color = ButtonColor.DEFAULT,
+      colorClassNames = defaultColorClasses,
+      sizeClassNames = defaultSizeClasses,
+      variantClassNames = defaultVariantClasses,
+      disabledClassName = defaultDisabledClass,
+      disabled = false,
+      className = "",
+      ...props
+    },
+    ref
+  ) => {
+    const colorClass = colorClassNames[color] ? [colorClassNames[color]] : [];
+    const sizeClass = sizeClassNames[size] ? [sizeClassNames[size]] : [];
+    const variantClass = variantClassNames[variant]
+      ? [sizeClassNames[size]]
+      : [];
+    const disableClass = disabledClassName ? [disabledClassName] : [];
+    const classes = cx(styles.BaseButton, className, [
+      ...colorClass,
+      ...sizeClass,
+      ...variantClass,
+      ...disableClass,
+    ]);
+
+    if (typeof href !== "undefined") {
+      const anchorRef = ref as ForwardedRef<HTMLAnchorElement>;
+      return (
+        <CustomLink
+          component={
+            <Link href={href} ref={anchorRef}>
+              <a className={classes} {...props}>
+                {children}
+              </a>
+            </Link>
+          }
+        />
+      );
+    }
+    const buttonRef = ref as ForwardedRef<HTMLButtonElement>;
     return (
-      <Link href={href}>
-        <a className={classes} {...props}>
-          {children}
-        </a>
-      </Link>
+      <button
+        ref={buttonRef}
+        type={type}
+        className={classes}
+        disabled={disabled}
+        {...props}
+      >
+        {children}
+      </button>
     );
   }
-  return (
-    <button type={type} className={classes} disabled={disabled} {...props}>
-      {children}
-    </button>
-  );
-};
+);
+Button.displayName = "Button";
