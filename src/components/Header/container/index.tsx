@@ -1,34 +1,18 @@
-import { forwardRef, HTMLAttributes, ReactNode } from "react";
+import { FC, forwardRef, HTMLAttributes, ReactNode } from "react";
 import cx from "classnames";
+import styles from "./styles.module.css";
 
-import { HeaderPosition, defaultPositionClasses } from "./constants";
-
-export interface HeaderContainerProps extends HTMLAttributes<HTMLDivElement> {
-  position?: HeaderPosition;
-  positionClasses?: { [position: string]: string };
-  children?: ReactNode;
+export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
+  children: ReactNode;
 }
-export const HeaderContainer = forwardRef<HTMLDivElement, HeaderContainerProps>(
-  (
-    {
-      position = HeaderPosition.FIXED,
-      positionClasses = defaultPositionClasses,
-      children,
-      className,
-      ...others
-    },
-    ref
-  ) => {
-    const positionClass = positionClasses[position]
-      ? [defaultPositionClasses[position]]
-      : [];
-
+export const Container = forwardRef<HTMLDivElement, ContainerProps>(
+  ({ children, className, ...others }, ref) => {
     return (
-      <div className={cx(className, [...positionClass])} {...others} ref={ref}>
+      <div ref={ref} className={cx(styles.Container, className)} {...others}>
         {children}
       </div>
     );
   }
 );
 
-HeaderContainer.displayName = "HeaderContainer";
+Container.displayName = "HeaderContainer";

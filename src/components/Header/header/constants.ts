@@ -8,3 +8,5 @@ export const defaultPositionClasses = {
   [HeaderPosition.FIXED]: globalStyles['Trk__sticky'],
   [HeaderPosition.STICKY]: globalStyles['Trk__sticky']
 };
+
+export const HeaderTopClass = globalStyles['Trk__top--0'];

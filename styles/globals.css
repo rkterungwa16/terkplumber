@@ -38,20 +38,18 @@ ul {
   padding: 0;
 }
 
-.horizontal__line--top {
-  border: none;
-  border-top: 1px solid var(--black);
-  padding: 0;
-  width: 100%;
+.Trk__top--0 {
+  top: 0;
 }
-
-.horizontal__line--white {
-  border: none;
-  border-top: 1px solid var(--white);
-  padding: 0;
-  width: 100%;
+.Trk__bottom--0 {
+  bottom: 0;
 }
-
+.Trk__left--0 {
+  left: 0;
+}
+.Trk__right--0 {
+  right: 0;
+}
 .Trk__border--none {
   border: none;
 }
