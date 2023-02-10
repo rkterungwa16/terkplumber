@@ -12,7 +12,7 @@ export const Layout:FC<LayoutProps> = ({ children }) => {
     <>
       <LayoutContainer>
         <Head>
-          <title>Create Next App</title>
+          <title>Terkplumber</title>
           <meta name="Terkplumber" content="Terkplumber portfolio" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />

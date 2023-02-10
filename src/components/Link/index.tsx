@@ -3,6 +3,7 @@ import {
   FC,
   cloneElement,
   ReactElement,
+  ElementType,
   ReactNode,
   forwardRef,
 } from "react";
@@ -18,13 +19,13 @@ interface CustomAnchorProps {
 }
 
 interface ComponentProps extends CustomAnchorProps {
-  [key: string]: boolean | string | undefined;
+  [key: string]: any;
 }
 
 interface CustomLinkProps
   extends HTMLAttributes<HTMLAnchorElement>,
     CustomAnchorProps {
-  component?: ReactElement;
+  component?: ElementType;
   componentProps?: ComponentProps;
   children?: ReactNode;
 }
@@ -34,7 +35,7 @@ export const CustomLink: FC<CustomLinkProps> = forwardRef<
 >(
   (
     {
-      component,
+      component: Component,
       componentProps,
       active,
       href,
@@ -47,25 +48,32 @@ export const CustomLink: FC<CustomLinkProps> = forwardRef<
     },
     ref
   ) => {
-    if (component) {
-      return cloneElement(component, {
-        ...(active && { "aria-current": "page" }),
-        ...(disabled && { "aria-disabled": true, tabIndex: -1 }),
-        ...(componentProps && componentProps),
-      });
+    const activeClass = active ? [anchorActiveClassName] : [];
+    const disableClass = disabled ? [anchorDisabledClassName] : [];
+    const classes = cx(className, [...activeClass, ...disableClass]);
+
+    if (Component) {
+      console.log("classes -->>", classes);
+      return (
+        <Component
+          {...others}
+          {...(active && { "aria-current": "page" })}
+          {...(disabled && { "aria-disabled": true, tabIndex: -1 })}
+          {...(classes && { className: classes })}
+          href={href}
+          ref={ref}
+        >
+          {children}
+        </Component>
+      );
     }
 
-    const activeClass = active ? [anchorActiveClassName] : [];
-    const disableClass = disabled
-      ? [anchorDisabledClassName]
-      : [];
-    const classes = cx(className, [...activeClass, ...disableClass]);
     return (
       <a
         {...others}
         {...(active && { "aria-current": "page" })}
         {...(disabled && { "aria-disabled": true, tabIndex: -1 })}
-        className={classes}
+        {...(classes && { className: classes })}
         ref={ref}
       >
         {children}

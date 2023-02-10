@@ -71,14 +71,14 @@ export const Button = forwardRef<
       const anchorRef = ref as ForwardedRef<HTMLAnchorElement>;
       return (
         <CustomLink
-          component={
-            <Link href={href} ref={anchorRef}>
-              <a className={classes} {...props}>
-                {children}
-              </a>
-            </Link>
-          }
-        />
+          component={Link}
+          // ref={anchorRef}
+          className={classes}
+          disabled={disabled}
+          {...props}
+        >
+          {children}
+        </CustomLink>
       );
     }
     const buttonRef = ref as ForwardedRef<HTMLButtonElement>;

@@ -1,12 +1,12 @@
-import globalStyles from "@styles/globals.css";
+
 export enum HeaderPosition {
   FIXED = "fixed",
   STICKY = "sticky"
 }
 
 export const defaultPositionClasses = {
-  [HeaderPosition.FIXED]: globalStyles['Trk__sticky'],
-  [HeaderPosition.STICKY]: globalStyles['Trk__sticky']
+  [HeaderPosition.FIXED]: 'Trk__sticky',
+  [HeaderPosition.STICKY]: 'Trk__sticky'
 };
 
-export const HeaderTopClass = globalStyles['Trk__top--0'];
+export const HeaderTopClass = 'Trk__top--0';

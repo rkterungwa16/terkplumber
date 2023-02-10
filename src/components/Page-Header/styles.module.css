@@ -1,0 +1,7 @@
+.Page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.3rem;
+  padding: 0rem 3.125rem;
+}

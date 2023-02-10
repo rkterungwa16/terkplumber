@@ -28,23 +28,23 @@ export enum ButtonSize {
 }
 
 export const defaultColorClasses = {
-  [ButtonColor.DEFAULT]: styles["BaseButton--default"],
-  [ButtonColor.PRIMARY]: styles["BaseButton--primary"],
-  [ButtonColor.SECONDARY]: styles["BaseButton--secondary"]
+  [ButtonColor.DEFAULT]: styles["Button--default"],
+  [ButtonColor.PRIMARY]: styles["Button--primary"],
+  [ButtonColor.SECONDARY]: styles["Button--secondary"]
 }
 
-export const defaultDisabledClass = styles["BaseButton--disabled"];
+export const defaultDisabledClass = styles["Button--disabled"];
 export const defaultVariantClasses = {
-  [ButtonVariant.STANDARD]: styles["BaseButton--standard"],
-  [ButtonVariant.OUTLINE]: styles["BaseButton--outline"],
-  [ButtonVariant.ROUNDED]: styles["BaseButton--rounded"],
-  [ButtonVariant.ICON]: styles["BaseButton--icon"]
+  [ButtonVariant.STANDARD]: styles["Button--standard"],
+  [ButtonVariant.OUTLINE]: styles["Button--outline"],
+  [ButtonVariant.ROUNDED]: styles["Button--rounded"],
+  [ButtonVariant.ICON]: styles["Button--icon"]
 }
 
 export const defaultSizeClasses = {
-  [ButtonSize.XS]: styles["BaseButtonSize--xs"],
-  [ButtonSize.SM]: styles["BaseButtonSize--sm"],
-  [ButtonSize.BASE]: styles["BaseButtonSize--base"],
-  [ButtonSize.L]: styles["BaseButtonSize--l"],
-  [ButtonSize.XL]: styles["BaseButtonSize--xl"],
+  [ButtonSize.XS]: styles["ButtonSize--xs"],
+  [ButtonSize.SM]: styles["ButtonSize--sm"],
+  [ButtonSize.BASE]: styles["ButtonSize--base"],
+  [ButtonSize.L]: styles["ButtonSize--l"],
+  [ButtonSize.XL]: styles["ButtonSize--xl"],
 }
