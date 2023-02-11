@@ -53,7 +53,6 @@ export const CustomLink: FC<CustomLinkProps> = forwardRef<
     const classes = cx(className, [...activeClass, ...disableClass]);
 
     if (Component) {
-      console.log("classes -->>", classes);
       return (
         <Component
           {...others}

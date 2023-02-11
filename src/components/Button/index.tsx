@@ -67,7 +67,6 @@ export const Button = forwardRef<
       ...disableClass,
     ]);
 
-    console.log('variant class', variantClass);
     if (typeof href !== "undefined") {
       const anchorRef = ref as ForwardedRef<HTMLAnchorElement>;
       return (
