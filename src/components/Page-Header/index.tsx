@@ -20,7 +20,7 @@ export const PageHeader = () => {
       <Nav>
         <NavList>
           {Object.values(HeaderNavs).map((nav, index) => {
-            return <NavListItem key={index}>{nav}</NavListItem>;
+            return <NavListItem className="Trk__pl--4 Trk__pr--4 " key={index}>{nav}</NavListItem>;
           })}
         </NavList>
       </Nav>
