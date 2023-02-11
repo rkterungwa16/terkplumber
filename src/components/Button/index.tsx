@@ -22,10 +22,10 @@ export interface ButtonProps
   color?: ButtonColor;
   size?: ButtonSize;
   variant?: ButtonVariant;
-  colorClassNames: { [color: string]: string };
-  sizeClassNames: { [size: string]: string };
-  variantClassNames: { [size: string]: string };
-  disabledClassName: string;
+  colorClassNames?: { [color: string]: string };
+  sizeClassNames?: { [size: string]: string };
+  variantClassNames?: { [size: string]: string };
+  disabledClassName?: string;
   href?: string;
   dataId?: string;
   disabled?: boolean;
@@ -57,9 +57,9 @@ export const Button = forwardRef<
     const colorClass = colorClassNames[color] ? [colorClassNames[color]] : [];
     const sizeClass = sizeClassNames[size] ? [sizeClassNames[size]] : [];
     const variantClass = variantClassNames[variant]
-      ? [sizeClassNames[size]]
+      ? [variantClassNames[variant]]
       : [];
-    const disableClass = disabledClassName ? [disabledClassName] : [];
+    const disableClass = disabled ? [disabledClassName] : [];
     const classes = cx(styles.BaseButton, className, [
       ...colorClass,
       ...sizeClass,
@@ -67,10 +67,12 @@ export const Button = forwardRef<
       ...disableClass,
     ]);
 
+    console.log('variant class', variantClass);
     if (typeof href !== "undefined") {
       const anchorRef = ref as ForwardedRef<HTMLAnchorElement>;
       return (
         <CustomLink
+          href={href}
           component={Link}
           // ref={anchorRef}
           className={classes}

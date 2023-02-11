@@ -7,6 +7,8 @@ import styles from "./styles.module.css";
 
 import { HeaderNavs } from "./constants";
 import { CustomLink } from "@components/Link";
+import { Button } from "@components/Button";
+import { ButtonColor, ButtonVariant } from "@components/Button/constants";
 export const PageHeader = () => {
   return (
     <Header className={cx(styles.Page__header, "bg-milky-white")}>
@@ -21,6 +23,15 @@ export const PageHeader = () => {
             return <NavListItem key={index}>{nav}</NavListItem>;
           })}
         </NavList>
+      </Nav>
+      <Nav>
+        <Button
+          href="/contact"
+          color={ButtonColor.PRIMARY}
+          variant={ButtonVariant.STANDARD}
+        >
+          Let’s Talk
+        </Button>
       </Nav>
     </Header>
   );
