@@ -1,21 +1,15 @@
 import {
   HTMLAttributes,
   FC,
-  cloneElement,
-  ReactElement,
   ElementType,
   ReactNode,
   forwardRef,
 } from "react";
 
-import cx from "classnames";
-
 interface CustomAnchorProps {
   active?: boolean;
   disabled?: boolean;
   href?: string;
-  anchorDisabledClassName?: string;
-  anchorActiveClassName?: string;
 }
 
 interface ComponentProps extends CustomAnchorProps {
@@ -41,24 +35,16 @@ export const CustomLink: FC<CustomLinkProps> = forwardRef<
       href,
       disabled,
       children,
-      anchorActiveClassName,
-      anchorDisabledClassName,
-      className,
       ...others
     },
     ref
   ) => {
-    const activeClass = active ? [anchorActiveClassName] : [];
-    const disableClass = disabled ? [anchorDisabledClassName] : [];
-    const classes = cx(className, [...activeClass, ...disableClass]);
-
     if (Component) {
       return (
         <Component
           {...others}
           {...(active && { "aria-current": "page" })}
           {...(disabled && { "aria-disabled": true, tabIndex: -1 })}
-          {...(classes && { className: classes })}
           href={href}
           ref={ref}
         >
@@ -72,7 +58,6 @@ export const CustomLink: FC<CustomLinkProps> = forwardRef<
         {...others}
         {...(active && { "aria-current": "page" })}
         {...(disabled && { "aria-disabled": true, tabIndex: -1 })}
-        {...(classes && { className: classes })}
         ref={ref}
       >
         {children}

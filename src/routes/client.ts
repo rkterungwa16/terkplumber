@@ -1,11 +1,11 @@
 export enum HeaderNavs {
-  HOME = "Home",
-  WORKS = "Works",
-  BLOG = "Blog",
-  CONTACT = "Contact"
+  HOME = "home",
+  WORKS = "works",
+  BLOG = "blog",
+  CONTACT = "contact"
 }
 
-export const HeaderNavRoutes = {
+export const ClientRoutes = {
   [HeaderNavs.HOME]: "/",
   [HeaderNavs.WORKS]: "/works",
   [HeaderNavs.BLOG]: "/blog",
