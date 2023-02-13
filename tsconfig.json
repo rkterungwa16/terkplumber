@@ -18,6 +18,7 @@
     "paths": {
       "@components/*": ["./src/components/*"],
       "@page-components/*": ["./src/page-components/*"],
+      "@routes/*": ["./src/routes/*"],
       "@styles/*": ["./styles/*"]
     }
   },
