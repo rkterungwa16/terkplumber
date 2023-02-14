@@ -437,21 +437,6 @@ p,
   display: none;
 }
 
-/*
-  Do not display for extra large screens and above
-*/
-/* @media only screen and (min-width: 1025px) {
-  .Trk__dn--xlg {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 1025px) {
-  .Trk__dn--xsm {
-    display: none;
-  }
-} */
-
 .Trk__relative {
   position: relative;
 }
