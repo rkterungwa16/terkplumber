@@ -7,7 +7,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -15,15 +15,15 @@ html {
 }
 
 :root {
-  --black: #21243D;
+  --black: #21243d;
   --grey: #c5c5c5;
-  --red: #FF6464;
-  --light-grey: #797F8B;
+  --red: #ff6464;
+  --light-grey: #797f8b;
   --lighter-grey: #f6f6f6;
   --white: #ffffff;
-  --milky-white: #FFFDF9;
-  --dark-green: #3B5856;
-  --light-brown: #8F7F5F;
+  --milky-white: #fffdf9;
+  --dark-green: #3b5856;
+  --light-brown: #8f7f5f;
   --dark-grey: #788189;
   --darker-grey: #999999;
 }
@@ -124,15 +124,6 @@ ul {
 
 .bg-dark-green {
   background: var(--dark-green);
-}
-
-.nav {
-  font-size: 1.25rem;
-  text-decoration: none;
-}
-
-.nav:hover {
-  color: var(--dark-green);
 }
 
 p,
@@ -382,10 +373,6 @@ p,
   width: 0%;
 }
 
-.Trk__width--third {
-  max-width: 33rem;
-}
-
 .Trk__flex {
   display: flex;
 }
@@ -446,38 +433,8 @@ p,
   flex-wrap: wrap;
 }
 
-.Trk__dn {
+.Trk__dnone {
   display: none;
-}
-
-@media only screen and (max-width: 768px) {
-  .Trk__dn--xs {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  .Trk__dn--sm {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 991px) {
-  .Trk__dn--lg {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .Trk__dn--xlg {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 1025px) {
-  .Trk__dn--xsm {
-    display: none;
-  }
 }
 
 .Trk__relative {
@@ -940,4 +897,233 @@ p,
 
 .Trk__o--7 {
   opacity: 0.7;
+}
+
+/*
+  mobile screen 0 - 480px (sm)
+  tablet screen 481px - 768px (md)
+  small screen 769px - 1024px (lg)
+  large screen >1025px (xlg)
+*/
+
+/*
+  Perform this action for screens < 480px (mobile)
+*/
+@media only screen and (max-width: 480px) {
+  /*
+    Class should not display for mobile screens < 480px
+  */
+  .Trk__dnone--sm {
+    display: none;
+  }
+  /*
+    Class should display flex for mobile screens < 480px
+  */
+  .Trk__dflex--sm {
+    display: flex;
+  }
+
+  .Trk__grow-1--sm {
+    flex-grow: 1;
+  }
+
+  .Trk__flex-column--sm {
+    flex-direction: column;
+  }
+
+  .Trk__justify-end--sm {
+    justify-content: flex-end;
+  }
+
+  .Trk__justify-center--sm {
+    justify-content: center;
+  }
+
+  .Trk__justify-around--sm {
+    justify-content: space-around;
+  }
+
+  .Trk__justify-between--sm {
+    justify-content: space-between;
+  }
+
+  .Trk__justify-start--sm {
+    justify-content: flex-start;
+  }
+
+  .Trk__justify-evenly--sm {
+    justify-content: space-evenly;
+  }
+
+  .Trk__align-center--sm {
+    align-items: center;
+  }
+
+  .Trk__align-end--sm {
+    align-items: flex-end;
+  }
+
+  .Trk__align-stretch--sm {
+    align-items: stretch;
+  }
+
+  .Trk__align-start--sm {
+    align-items: flex-start;
+  }
+
+  .Trk__align-baseline--sm {
+    align-items: baseline;
+  }
+
+  .Trk__flex-wrap--sm {
+    flex-wrap: wrap;
+  }
+}
+/*
+  Perform this action for screens > 480px (tablets)
+*/
+@media only screen and (min-width: 480px) {
+  /*
+    Class should not display for tablet screens > 480px
+  */
+  .Trk__dnone--md {
+    display: none;
+  }
+  /*
+    Class should display flex for tablet > 480px
+  */
+  .Trk__dflex--md {
+    display: flex;
+  }
+
+  .Trk__grow-1--md {
+    flex-grow: 1;
+  }
+
+  .Trk__flex-column--md {
+    flex-direction: column;
+  }
+
+  .Trk__justify-end--md {
+    justify-content: flex-end;
+  }
+
+  .Trk__justify-center--md {
+    justify-content: center;
+  }
+
+  .Trk__justify-around--md {
+    justify-content: space-around;
+  }
+
+  .Trk__justify-between--md {
+    justify-content: space-between;
+  }
+
+  .Trk__justify-start--md {
+    justify-content: flex-start;
+  }
+
+  .Trk__justify-evenly--md {
+    justify-content: space-evenly;
+  }
+
+  .Trk__align-center--md {
+    align-items: center;
+  }
+
+  .Trk__align-end--md {
+    align-items: flex-end;
+  }
+
+  .Trk__align-stretch--md {
+    align-items: stretch;
+  }
+
+  .Trk__align-start--md {
+    align-items: flex-start;
+  }
+
+  .Trk__align-baseline--md {
+    align-items: baseline;
+  }
+
+  .Trk__flex-wrap--md {
+    flex-wrap: wrap;
+  }
+}
+
+/*
+  Perform this action for screens > 768px (small/large screens)
+*/
+@media only screen and (min-width: 768px) {
+  /*
+    Class should not display for tablet screens > 786px
+  */
+  .Trk__dnone--lg {
+    display: none;
+  }
+
+  /*
+    Class should display flex for tablet > 480px
+  */
+  .Trk__dflex-lg {
+    display: flex;
+  }
+
+  .Trk__grow-1--lg {
+    flex-grow: 1;
+  }
+
+  .Trk__flex-column--lg {
+    flex-direction: column;
+  }
+
+  .Trk__justify-end--lg {
+    justify-content: flex-end;
+  }
+
+  .Trk__justify-center--lg {
+    justify-content: center;
+  }
+
+  .Trk__justify-around--lg {
+    justify-content: space-around;
+  }
+
+  .Trk__justify-between--lg {
+    justify-content: space-between;
+  }
+
+  .Trk__justify-start--lg {
+    justify-content: flex-start;
+  }
+
+  .Trk__justify-evenly--lg {
+    justify-content: space-evenly;
+  }
+
+  .Trk__align-center--lg {
+    align-items: center;
+  }
+
+  .Trk__align-end--lg {
+    align-items: flex-end;
+  }
+
+  .Trk__align-stretch--lg {
+    align-items: stretch;
+  }
+
+  .Trk__align-start--lg {
+    align-items: flex-start;
+  }
+
+  .Trk__align-baseline--lg {
+    align-items: baseline;
+  }
+
+  .Trk__flex-wrap--lg {
+    flex-wrap: wrap;
+  }
 }
