@@ -21,7 +21,7 @@ export const PageHeader = () => {
           <Image width={117} height={42} src="/logo.png" alt="Logo" />
         </CustomLink>
       </Nav>
-      <Nav>
+      <Nav className="Trk__dnone--sm">
         <NavList>
           {Object.values(HeaderNavs).map((nav, index) => {
             const isActive = ClientRoutes[nav] === pathname;
@@ -42,7 +42,7 @@ export const PageHeader = () => {
           })}
         </NavList>
       </Nav>
-      <Nav>
+      <Nav className="Trk__dnone--sm">
         <Button
           href={ClientRoutes.contact}
           color={ButtonColor.PRIMARY}
