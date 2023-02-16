@@ -68,3 +68,14 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+
+.Button--icon {
+  display: flex;
+  width: 2.375rem;
+  height: 2.375rem;
+  justify-content: center;
+  align-items: center;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 50%;
+}

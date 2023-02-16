@@ -1,7 +1,7 @@
 
 import { Layout } from "@components/Layout";
 
-export const Home = () => {
+export const Works = () => {
   return <Layout>
 
   </Layout>;
