@@ -300,11 +300,11 @@ p,
   }
 
   .text__body--xlarge {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .text__body--xxlarge {
-    font-size: 4rem;
+    font-size: 5.5rem;
   }
 
   .text__body--xxxlarge {
@@ -352,6 +352,9 @@ p,
 }
 .font__weight--bold {
   font-weight: 700;
+}
+.font__weight--xbold {
+  font-weight: 900;
 }
 
 .Trk__LineHeight--0 {
@@ -408,6 +411,10 @@ p,
 
 .Trk__height--max {
   height: 100%;
+}
+
+.Trk__width--md {
+  width: 50%;
 }
 
 .Trk__width--min {

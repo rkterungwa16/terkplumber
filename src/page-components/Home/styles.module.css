@@ -1,55 +1,16 @@
 .sm__handles {
-  position: fixed;
   top: 200px;
   right: 35px;
 }
 
 .sm__handles ul {
-  display: flex;
-  flex-direction: column;
   gap: 25px;
 }
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.greetings {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.dash {
-  width: 24px;
-  height: 0px;
-  border: 2px solid #797F8B;
-}
-
-.hello {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 60px;
-  /* or 375% */
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #797F8B;
-
-}
-
+/*
 .brief__intro p {
-  width: 850px;
-  text-align: center;
-  margin: .3rem 0;
+  width: 900px;
 }
+
 
 .brief__intro p span:nth-child(1)
 {
@@ -58,7 +19,7 @@
   font-weight: 900;
   font-size: 55.2654px;
   line-height: 120%;
-  /* or 66px */
+
 
   text-align: center;
   color: #000000;
@@ -71,7 +32,7 @@
   font-weight: 900;
   font-size: 55.2654px;
   line-height: 120%;
-  /* or 66px */
+
 
   text-align: center;
   color: #8F7F5F;
@@ -84,7 +45,7 @@
   font-weight: 900;
   font-size: 55.2654px;
   line-height: 120%;
-  /* or 66px */
+
 
   text-align: center;
   color: #21243D;
@@ -97,12 +58,12 @@
   font-weight: 900;
   font-size: 55.2654px;
   line-height: 120%;
-  /* or 66px */
+
 
   text-align: center;
   color: #797F8B;
 }
-
+*/
 .underline {
   width: 550.68px;
   height: 32.57px;
@@ -129,4 +90,72 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+
+.about__me {
+ display: flex;
+ width: 1100px;
+ gap: 200px;
+}
+
+.about__me .info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+}
+
+.info__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info__head .dash {
+  width: 39.61px;
+  height: 0px;
+  background: #8F7F5F;
+  border: 5.28113px solid #8F7F5F;
+}
+
+.info__head .about {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 39.6085px;
+  line-height: 79px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  color: #8F7F5F;
+}
+
+.info p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21.1245px;
+  line-height: 26px;
+
+  /* Dark Color */
+
+  color: #21243D;
+}
+
+/*
+  Perform this action for screens < 480px (mobile)
+*/
+@media only screen and (max-width: 480px) {
+
+  .sm__handles {
+    position: relative;
+    top: 700px;
+    left: 135px;
+  }
+
+  .sm__handles ul {
+    display: flex;
+    flex-direction: row;
+  }
+
 }

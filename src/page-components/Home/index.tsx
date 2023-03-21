@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import cx from "classnames";
 
 import { Layout } from "@components/Layout";
 import { PageMain } from "@components/Page-Main";
@@ -22,8 +23,8 @@ import styles from "./styles.module.css";
 export const Home = () => {
   return <Layout>
     <PageMain>
-      <div className={styles.sm__handles}>
-        <ul>
+      <div className={cx(styles.sm__handles, "Trk__fixed")}>
+        <ul className="Trk__flex Trk__direction--column">
           <li>
             <CustomLink component={Link} href="">
               <Image height={27} width={27} src={github} alt="github" />
@@ -46,20 +47,19 @@ export const Home = () => {
           </li>
         </ul>
       </div>
-      <PageSection className={styles.intro}>
-
-        <div className={styles.brief__intro}>
-          <p>
-            <span>My name is</span> &#160; <span>Terungwa Kombol,</span><br />
-            <span>I&#39;m a Software Developer.</span>
+      <PageSection className="Trk__flex Trk__direction--column Trk__justify--center Trk__align--center">
+        <div className={cx(styles.brief__intro, "font__weight--xbold Trk__LineHeight--6 Trk__text--center")}>
+          <p className="Trk__mt--1 Trk__mb--1">
+            <span className="black text__body--xlarge">My name is</span> &#160; <span className="light-brown text__body--xlarge">Terungwa Kombol,</span><br />
+            <span className="grey text__body--xlarge">I&#39;m a Software Developer.</span>
           </p>
         </div>
 
-        <div className={styles.underline}>
+        <div className={cx(styles.underline, "Trk__dnone--sm")}>
           <Image src={underline} alt="Underline" />
         </div>
 
-        <div className={styles.summary}>
+        <div className="Trk__flex Trk__mt--3 Trk__mr--4 Trk__ml--4 Trk__width--md Trk__mb--3 black font__weight--small Trk__LineHeight--2 Trk__text--center">
           <p>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
           </p>
@@ -74,12 +74,6 @@ export const Home = () => {
           </Button>
         </div>
       </PageSection>
-
-      <PageSection className="about-me">
-
-      </PageSection>
-
-
     </PageMain>
   </Layout>;
 };
