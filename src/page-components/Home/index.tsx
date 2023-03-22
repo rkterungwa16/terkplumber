@@ -48,7 +48,7 @@ export const Home = () => {
         </ul>
       </div>
       <PageSection className="Trk__flex Trk__direction--column Trk__justify--center Trk__align--center">
-        <div className={cx(styles.brief__intro, "font__weight--xbold Trk__LineHeight--6 Trk__text--center")}>
+        <div className= "font__weight--xbold Trk__LineHeight--6 Trk__text--center">
           <p className="Trk__mt--1 Trk__mb--1">
             <span className="black text__body--xlarge">My name is</span> &#160; <span className="light-brown text__body--xlarge">Terungwa Kombol,</span><br />
             <span className="grey text__body--xlarge">I&#39;m a Software Developer.</span>

@@ -70,28 +70,8 @@
   padding-left: 75px;
 }
 
-.summary {
-  width: 497px;
-  height: 66px;
-  margin: 2rem 0;
-}
 
-.summary p{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-
-  /* Dark Color */
-
-  color: #21243D;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
+/*
 .about__me {
  display: flex;
  width: 1100px;
@@ -137,11 +117,11 @@
   font-size: 21.1245px;
   line-height: 26px;
 
-  /* Dark Color */
+
 
   color: #21243D;
 }
-
+*/
 /*
   Perform this action for screens < 480px (mobile)
 */
