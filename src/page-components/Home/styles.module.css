@@ -6,64 +6,7 @@
 .sm__handles ul {
   gap: 25px;
 }
-/*
-.brief__intro p {
-  width: 900px;
-}
 
-
-.brief__intro p span:nth-child(1)
-{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 55.2654px;
-  line-height: 120%;
-
-
-  text-align: center;
-  color: #000000;
-}
-
-.brief__intro p span:nth-child(2)
-{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 55.2654px;
-  line-height: 120%;
-
-
-  text-align: center;
-  color: #8F7F5F;
-}
-
-.brief__intro p span:nth-child(3)
-{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 55.2654px;
-  line-height: 120%;
-
-
-  text-align: center;
-  color: #21243D;
-}
-
-.brief__intro p span:nth-child(4)
-{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 55.2654px;
-  line-height: 120%;
-
-
-  text-align: center;
-  color: #797F8B;
-}
-*/
 .underline {
   width: 550.68px;
   height: 32.57px;
@@ -71,57 +14,6 @@
 }
 
 
-/*
-.about__me {
- display: flex;
- width: 1100px;
- gap: 200px;
-}
-
-.about__me .info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 500px;
-}
-
-.info__head {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.info__head .dash {
-  width: 39.61px;
-  height: 0px;
-  background: #8F7F5F;
-  border: 5.28113px solid #8F7F5F;
-}
-
-.info__head .about {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 39.6085px;
-  line-height: 79px;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  color: #8F7F5F;
-}
-
-.info p {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 21.1245px;
-  line-height: 26px;
-
-
-
-  color: #21243D;
-}
-*/
 /*
   Perform this action for screens < 480px (mobile)
 */
