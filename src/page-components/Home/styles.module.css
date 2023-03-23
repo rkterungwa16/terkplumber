@@ -1,0 +1,33 @@
+.sm__handles {
+  top: 200px;
+  right: 35px;
+}
+
+.sm__handles ul {
+  gap: 25px;
+}
+
+.underline {
+  width: 550.68px;
+  height: 32.57px;
+  padding-left: 75px;
+}
+
+
+/*
+  Perform this action for screens < 480px (mobile)
+*/
+@media only screen and (max-width: 480px) {
+
+  .sm__handles {
+    position: relative;
+    top: 700px;
+    left: 135px;
+  }
+
+  .sm__handles ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
