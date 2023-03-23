@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import cx from "classnames";
 import { Bars3Icon } from "@heroicons/react/24/outline";
+import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
 
 import styles from "./styles.module.css";
 
@@ -57,6 +58,11 @@ export const PageHeader = () => {
         >
           Let’s Talk
         </Button>
+      </Nav>
+      <Nav className="Trk__dnone Trk__dnone--md Trk__dflex--sm ">
+        <IconButton href={ClientRoutes.contact}>
+          <ChatBubbleLeftIcon />
+        </IconButton>
       </Nav>
     </Header>
   );

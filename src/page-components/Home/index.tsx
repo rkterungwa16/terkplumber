@@ -49,17 +49,18 @@ export const Home = () => {
       </div>
       <PageSection className="Trk__flex Trk__direction--column Trk__justify--center Trk__align--center">
         <div className= "font__weight--xbold Trk__LineHeight--6 Trk__text--center">
-          <p className="Trk__mt--1 Trk__mb--1">
+          <p>
             <span className="black text__body--xlarge">My name is</span> &#160; <span className="light-brown text__body--xlarge">Terungwa Kombol,</span><br />
             <span className="grey text__body--xlarge">I&#39;m a Software Developer.</span>
           </p>
-        </div>
 
-        <div className={cx(styles.underline, "Trk__dnone--sm")}>
+        </div>
+        <div className={cx(styles.underline, "Trk__flex Trk__justify--end Trk__justify-center--sm Trk__align-start--sm")}>
           <Image src={underline} alt="Underline" />
         </div>
 
-        <div className="Trk__flex Trk__mt--3 Trk__mr--4 Trk__ml--4 Trk__width--md Trk__mb--3 black font__weight--small Trk__LineHeight--2 Trk__text--center">
+
+        <div className={cx(styles.summary, "Trk__flex Trk__mt--4 Trk__mb--4 Trk__mr--4 Trk__ml--4 Trk__width--md black font__weight--small Trk__LineHeight--2 Trk__text--center")}>
           <p>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
           </p>

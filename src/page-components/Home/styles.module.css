@@ -8,9 +8,20 @@
 }
 
 .underline {
-  width: 550.68px;
-  height: 32.57px;
-  padding-left: 75px;
+width: 85%;
+}
+
+.underline img{
+  width: 100%;
+  object-fit: contain;
+  object-position: right top;
+}
+
+.summary{
+  max-width: 490px;
+  min-width: 330px;
+  font-size: 18px;
+  word-spacing: normal;
 }
 
 
@@ -30,4 +41,30 @@
     flex-direction: row;
   }
 
+  .underline img{
+    width: 75%;
+
+  }
+
+  .summary{
+    font-size: 16px;
+  }
+
+
+}
+
+/*
+  Perform this action for screens >= 480px (tablet)
+*/
+@media only screen and (min-width: 480px ) and ( max-width: 768px) {
+  .sm__handles {
+    position: relative;
+    top: 700px;
+    left: 135px;
+  }
+
+  .sm__handles ul {
+    display: flex;
+    flex-direction: row;
+  }
 }
