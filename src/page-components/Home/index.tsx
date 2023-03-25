@@ -1,53 +1,26 @@
-import Link from "next/link";
+
 import Image from "next/image";
 import cx from "classnames";
 
 import { Layout } from "@components/Layout";
 import { PageMain } from "@components/Page-Main";
 import { PageSection } from "@components/Page-Section";
-import { CustomLink } from "@components/Link";
 import { Button } from "@components/Button";
+import { SmIcons } from "@components/SM-Icons";
 import {
   ButtonColor,
   ButtonVariant,
 } from "@components/Button/constants";
 
 import underline from "../../assets/Underline_07.png";
-import github from "../../assets/github_icon.svg";
-import twitter from "../../assets/twitter_icon.svg";
-import linkedIn from "../../assets/linkedin_icon.svg";
-import youtube from "../../assets/youtube_icon.svg";
 
 import styles from "./styles.module.css";
 
 export const Home = () => {
   return <Layout>
     <PageMain>
-      <div className={cx(styles.sm__handles, "Trk__fixed")}>
-        <ul className="Trk__flex Trk__direction--column">
-          <li>
-            <CustomLink component={Link} href="">
-              <Image height={27} width={27} src={github} alt="github" />
-            </CustomLink>
-          </li>
-          <li>
-            <CustomLink component={Link} href="">
-              <Image height={27} width={27} src={twitter} alt="twitter" />
-            </CustomLink>
-          </li>
-          <li>
-            <CustomLink component={Link} href="">
-              <Image height={27} width={27} src={linkedIn} alt="linkedIn" />
-            </CustomLink>
-          </li>
-          <li>
-            <CustomLink component={Link} href="">
-              <Image height={27} width={27} src={youtube} alt="youtube" />
-            </CustomLink>
-          </li>
-        </ul>
-      </div>
-      <PageSection className="Trk__flex Trk__direction--column Trk__justify--center Trk__align--center">
+    <SmIcons />
+      <PageSection className={cx(styles.first__section, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
         <div className= "font__weight--xbold Trk__LineHeight--6 Trk__text--center">
           <p>
             <span className="black text__body--xlarge">My name is</span> &#160; <span className="light-brown text__body--xlarge">Terungwa Kombol,</span><br />

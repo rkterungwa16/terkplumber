@@ -59,7 +59,7 @@ export const PageHeader = () => {
           Let’s Talk
         </Button>
       </Nav>
-      <Nav className="Trk__dnone Trk__dnone--md Trk__dflex--sm ">
+      <Nav className="Trk__dnone Trk__dnone--md Trk__dflex--sm">
         <IconButton href={ClientRoutes.contact}>
           <ChatBubbleLeftIcon />
         </IconButton>

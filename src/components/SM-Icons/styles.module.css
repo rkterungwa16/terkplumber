@@ -7,28 +7,6 @@
   gap: 25px;
 }
 
-.first__section{
-  word-spacing: normal;
-}
-
-.underline {
-width: 85%;
-}
-
-.underline img{
-  width: 100%;
-  object-fit: contain;
-  object-position: right top;
-}
-
-.summary{
-  max-width: 490px;
-  min-width: 330px;
-  font-size: 18px;
-  word-spacing: normal;
-}
-
-
 /*
   Perform this action for screens < 480px (mobile)
 */
@@ -45,20 +23,10 @@ width: 85%;
     flex-direction: row;
   }
 
-  .underline img{
-    width: 75%;
-
-  }
-
-  .summary{
-    font-size: 16px;
-  }
-
-
 }
 
 /*
-  Perform this action for screens >= 480px (tablet)
+  Perform this action for screens > 480px & < 768px (tablet & desktop)
 */
 @media only screen and (min-width: 480px ) and ( max-width: 768px) {
   .sm__handles {
@@ -71,8 +39,4 @@ width: 85%;
     display: flex;
     flex-direction: row;
   }
-
-  .underline {
-    width: 75%;
-    }
 }

@@ -1,13 +1,34 @@
+
 {
-  "moduleFileExtensions": ["js", "json", "ts", "tsx"],
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts",
+    "tsx"
+  ],
   "resetMocks": true,
-  "rootDir": "src",
+  "rootDir": "./src",
   "testRegex": "/src/.*\\.test\\.tsx?$",
-  "testPathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/.next/"],
-  "transformIgnorePatterns": ["^.+\\.module\\.(css|sass|scss)$"],
+  "testPathIgnorePatterns": [
+    "<rootDir>/node_modules/",
+    "<rootDir>/.next/"
+  ],
+  "transformIgnorePatterns": [
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
   "coverageDirectory": "./coverage",
   "testEnvironment": "jsdom",
+  "roots": [
+    "<rootDir>/"
+  ],
   "moduleNameMapper": {
-    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+    "^@components": [
+      "<rootDir>/components"
+    ],
+    "^@page-components": ["<rootDir>/page-components"],
+    "^@routes": ["<rootDir>/routes"],
+    "^@styles": ["<rootDir>/styles"]
   }
 }
+
