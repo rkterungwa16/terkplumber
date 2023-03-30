@@ -27,7 +27,7 @@ export const SmIcons:FC = () => {
             </CustomLink>
           </li>
           <li>
-            <CustomLink component={Link} href="https://www.linkedIn.com">
+            <CustomLink component={Link} href="https://www.linkedin.com/in/terungwa-kombol-1034574a">
               <Image height={27} width={27} src={linkedIn} alt="linkedIn" />
             </CustomLink>
           </li>

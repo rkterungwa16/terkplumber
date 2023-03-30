@@ -16,15 +16,22 @@ import underline from "../../assets/Underline_07.png";
 
 import styles from "./styles.module.css";
 
-export const Home = () => {
+type Props = {
+  summary?: string;
+  start?: string;
+  name?: string;
+  occupation?: string;
+}
+export const Home:React.FC<Props> = ({summary, start, name, occupation}) => {
+
   return <Layout>
     <PageMain>
     <SmIcons />
       <PageSection className={cx(styles.first__section, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
         <div className= "font__weight--xbold Trk__LineHeight--6 Trk__text--center">
           <p>
-            <span className="black text__body--xlarge">My name is</span> &#160; <span className="light-brown text__body--xlarge">Terungwa Kombol,</span><br />
-            <span className="grey text__body--xlarge">I&#39;m a Software Developer.</span>
+            <span className="black text__body--xlarge" data-testid="start-data">{start}</span> &#160; <span className="light-brown text__body--xlarge" data-testid="name-data">{name},</span><br />
+            <span className="grey text__body--xlarge" data-testid="oc-data">{occupation}.</span>
           </p>
 
         </div>
@@ -34,8 +41,8 @@ export const Home = () => {
 
 
         <div className={cx(styles.summary, "Trk__flex Trk__mt--4 Trk__mb--4 Trk__mr--4 Trk__ml--4 Trk__width--md black font__weight--small Trk__LineHeight--2 Trk__text--center")}>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          <p data-testid="sum-data">
+            {summary}
           </p>
         </div>
 

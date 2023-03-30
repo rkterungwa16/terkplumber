@@ -16,9 +16,9 @@ import { ButtonColor, ButtonVariant } from "@components/Button/constants";
 import { IconButton } from "@components/Button/icon";
 
 export const PageHeader = () => {
-  //const router = useRouter();
+
   const pathname = usePathname();
-  //const pathname = router?.pathname;
+
   return (
     <Header className={cx(styles.Page__header, "bg-milky-white")}>
       <Nav className="Trk__dnone--md Trk__absolute--sm Trk__left--3">

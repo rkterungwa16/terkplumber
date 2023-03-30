@@ -11,31 +11,36 @@ describe('Social media icons', () => {
       name: 'github',
     })
 
-    expect(github.getAttribute('href')).toBe('www.github.com');
+    expect(github.getAttribute('href')).toBe('https://www.github.com/rkterungwa16');
+  })
+
+  it('verifies twitter link exists ', () => {
+    render(<SmIcons />)
+
+    const twitter = screen.getByRole('link', {
+      name: 'twitter',
+    })
+
+    expect(twitter.getAttribute('href')).toBe('https://www.twitter.com/terkplumber');
+  })
+
+  it('verifies linkedin link exists ', () => {
+    render(<SmIcons />)
+
+    const linkedIn = screen.getByRole('link', {
+      name: 'linkedIn',
+    })
+
+    expect(linkedIn.getAttribute('href')).toBe('https://www.linkedin.com/in/terungwa-kombol-1034574a');
+  })
+
+  it('verifies youtube link exists ', () => {
+    render(<SmIcons />)
+
+    const youTube = screen.getByRole('link', {
+      name: 'youtube',
+    })
+
+    expect(youTube.getAttribute('href')).toBe('https://www.youtube.com');
   })
 })
-/*
-test("github link functionality", () => {
-  render(<SmIcons />);
-  const contactBttn = screen.getByRole("link", { name: "contact"});
-  expect(contactBttn.getAttribute('href')).toBe('/contact');
-});
-
-test("twitter link functionality", () => {
-  render(<SmIcons />);
-  const contactBttn = screen.getByRole("link", { name: "blog"});
-  expect(contactBttn.getAttribute('href')).toBe('/blog');
-});
-
-test("linkedIn link functionality", () => {
-  render(<SmIcons />);
-  const contactBttn = screen.getByRole("link", { name: "works"});
-  expect(contactBttn.getAttribute('href')).toBe('/works');
-});
-
-test("youtube link functionality", () => {
-  render(<SmIcons />);
-  const contactBttn = screen.getByRole("link", { name: "works"});
-  expect(contactBttn.getAttribute('href')).toBe('/works');
-});
-*/
