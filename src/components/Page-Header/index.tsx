@@ -2,6 +2,7 @@ import { Header, Nav, NavList, NavListItem } from "@components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { usePathname } from 'next/navigation';
 import cx from "classnames";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
@@ -15,8 +16,9 @@ import { ButtonColor, ButtonVariant } from "@components/Button/constants";
 import { IconButton } from "@components/Button/icon";
 
 export const PageHeader = () => {
-  const router = useRouter();
-  const pathname = router?.pathname;
+  //const router = useRouter();
+  const pathname = usePathname();
+  //const pathname = router?.pathname;
   return (
     <Header className={cx(styles.Page__header, "bg-milky-white")}>
       <Nav className="Trk__dnone--md Trk__absolute--sm Trk__left--3">
@@ -52,6 +54,7 @@ export const PageHeader = () => {
       </Nav>
       <Nav className="Trk__dnone--sm">
         <Button
+        data-testid="thebtn"
           href={ClientRoutes.contact}
           color={ButtonColor.PRIMARY}
           variant={ButtonVariant.STANDARD}

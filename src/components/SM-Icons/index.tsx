@@ -17,22 +17,22 @@ export const SmIcons:FC = () => {
       <div className={cx(styles.sm__handles, "Trk__fixed")}>
         <ul className="Trk__flex Trk__direction--column">
           <li>
-            <CustomLink component={Link} href="">
+            <CustomLink component={Link} href="https://www.github.com/rkterungwa16">
               <Image height={27} width={27} src={github} alt="github" />
             </CustomLink>
           </li>
           <li>
-            <CustomLink component={Link} href="">
+            <CustomLink component={Link} href="https://www.twitter.com/terkplumber">
               <Image height={27} width={27} src={twitter} alt="twitter" />
             </CustomLink>
           </li>
           <li>
-            <CustomLink component={Link} href="">
+            <CustomLink component={Link} href="https://www.linkedIn.com">
               <Image height={27} width={27} src={linkedIn} alt="linkedIn" />
             </CustomLink>
           </li>
           <li>
-            <CustomLink component={Link} href="">
+            <CustomLink component={Link} href="https://www.youtube.com">
               <Image height={27} width={27} src={youtube} alt="youtube" />
             </CustomLink>
           </li>
