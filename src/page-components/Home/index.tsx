@@ -12,7 +12,7 @@ import {
   ButtonVariant,
 } from "@components/Button/constants";
 
-import underline from "../../assets/Underline_07.png";
+
 
 import styles from "./styles.module.css";
 
@@ -30,13 +30,13 @@ export const Home:React.FC<Props> = ({summary, start, name, occupation}) => {
       <PageSection className={cx(styles.first__section, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
         <div className= "font__weight--xbold Trk__LineHeight--6 Trk__text--center">
           <p>
-            <span className="black text__body--xlarge" data-testid="start-data">{start}</span> &#160; <span className="light-brown text__body--xlarge" data-testid="name-data">{name},</span><br />
-            <span className="grey text__body--xlarge" data-testid="oc-data">{occupation}.</span>
+            <span className="black text__body--xlarge" data-testid="start-data">{start}</span> &#160; <span className="light-brown text__body--xlarge" data-testid="name-data">{name}</span><br />
+            <span className="grey text__body--xlarge" data-testid="oc-data">{occupation}</span>
           </p>
 
         </div>
         <div className={cx(styles.underline, "Trk__flex Trk__justify--end Trk__justify-center--sm Trk__align-start--sm")}>
-          <Image src={underline} alt="Underline" />
+          <Image src="/Underline_07.png" alt="Underline" width={550} height={33} />
         </div>
 
 

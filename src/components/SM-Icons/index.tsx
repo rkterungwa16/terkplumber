@@ -5,11 +5,6 @@ import cx from "classnames";
 
 import { CustomLink } from "@components/Link";
 
-import github from "../../assets/github_icon.svg";
-import twitter from "../../assets/twitter_icon.svg";
-import linkedIn from "../../assets/linkedin_icon.svg";
-import youtube from "../../assets/youtube_icon.svg";
-
 import styles from "./styles.module.css";
 
 export const SmIcons:FC = () => {
@@ -18,22 +13,22 @@ export const SmIcons:FC = () => {
         <ul className="Trk__flex Trk__direction--column">
           <li>
             <CustomLink component={Link} href="https://www.github.com/rkterungwa16">
-              <Image height={27} width={27} src={github} alt="github" />
+              <Image height={27} width={27} src="github_icon.svg" alt="github" />
             </CustomLink>
           </li>
           <li>
             <CustomLink component={Link} href="https://www.twitter.com/terkplumber">
-              <Image height={27} width={27} src={twitter} alt="twitter" />
+              <Image height={27} width={27} src="twitter_icon.svg" alt="twitter" />
             </CustomLink>
           </li>
           <li>
             <CustomLink component={Link} href="https://www.linkedin.com/in/terungwa-kombol-1034574a">
-              <Image height={27} width={27} src={linkedIn} alt="linkedIn" />
+              <Image height={27} width={27} src="linkedin_icon.svg" alt="linkedIn" />
             </CustomLink>
           </li>
           <li>
             <CustomLink component={Link} href="https://www.youtube.com">
-              <Image height={27} width={27} src={youtube} alt="youtube" />
+              <Image height={27} width={27} src="youtube_icon.svg" alt="youtube" />
             </CustomLink>
           </li>
         </ul>
