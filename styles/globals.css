@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 1px solid red !important;
 }
 
 body {
@@ -961,6 +962,10 @@ p,
   /*
     Class should not display for mobile screens < 480px
   */
+  .text__body-mlarge--sm {
+    font-size: 2.2rem;
+  }
+
   .Trk__dnone--sm {
     display: none;
   }
@@ -1058,6 +1063,8 @@ p,
   .Trk__flex-wrap--sm {
     flex-wrap: wrap;
   }
+
+
 }
 /*
   Perform this action for screens > 480px (tablets)

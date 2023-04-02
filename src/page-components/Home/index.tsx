@@ -28,10 +28,10 @@ export const Home:React.FC<Props> = ({summary, start, name, occupation}) => {
     <PageMain>
     <SmIcons />
       <PageSection className={cx(styles.first__section, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
-        <div className= "font__weight--xbold Trk__LineHeight--6 Trk__text--center">
+        <div className={cx(styles.intro,"font__weight--xbold Trk__LineHeight--6 Trk__text--center")}>
           <p>
-            <span className="black text__body--xlarge" data-testid="start-data">{start}</span> &#160; <span className="light-brown text__body--xlarge" data-testid="name-data">{name}</span><br />
-            <span className="grey text__body--xlarge" data-testid="oc-data">{occupation}</span>
+            <span className="black text__body--xlarge text__body-mlarge--sm" data-testid="start-data">{start}</span> &#160; <span className="light-brown text__body--xlarge text__body-mlarge--sm" data-testid="name-data">{name}</span><br />
+            <span className="grey text__body--xlarge text__body-mlarge--sm" data-testid="oc-data">{occupation}</span>
           </p>
 
         </div>

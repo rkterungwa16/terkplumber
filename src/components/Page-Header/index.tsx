@@ -20,7 +20,7 @@ export const PageHeader = () => {
   const pathname = usePathname();
 
   return (
-    <Header className={cx(styles.Page__header, "bg-milky-white")}>
+    <Header className={cx(styles.Page__header, "bg-milky-white ")}>
       <Nav className="Trk__dnone--md Trk__absolute--sm Trk__left--3">
         <IconButton>
           <Bars3Icon />
@@ -62,7 +62,7 @@ export const PageHeader = () => {
           Let’s Talk
         </Button>
       </Nav>
-      <Nav className="Trk__dnone Trk__dnone--md Trk__dflex--sm">
+      <Nav className="Trk__dnone Trk__dnone--md Trk__dflex--sm Trk__right--3">
         <IconButton href={ClientRoutes.contact}>
           <ChatBubbleLeftIcon />
         </IconButton>
