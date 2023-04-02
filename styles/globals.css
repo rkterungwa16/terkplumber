@@ -92,6 +92,11 @@ ul {
 .Trk__right--0 {
   right: 0;
 }
+
+.Trk__right--3 {
+  right: 1rem;
+}
+
 .Trk__border--none {
   border: none;
 }

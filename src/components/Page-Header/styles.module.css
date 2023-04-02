@@ -1,10 +1,9 @@
 .Page__header {
   display: flex;
-
   justify-content: space-between;
-
+  align-items: center;
   height: 4.3rem;
- padding: 0rem 3.125rem;
+  padding: 0rem 3.125rem;
 }
 
 .Page__nav--active {
@@ -31,7 +30,8 @@
 @media only screen and (max-width: 480px) {
   .Page__header {
 
-    justify-content: center;
+
+
 
 
   }
