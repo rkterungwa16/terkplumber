@@ -23,24 +23,3 @@
 .Page__nav:hover {
   color: #60BB46;
 }
-
-/*
-  Perform this action for screens < 480px (mobile)
-*/
-@media only screen and (max-width: 480px) {
-  .Page__header {
-
-
-
-
-
-  }
-
-}
-
-/*
-  Perform this action for screens > 480px & < 768px (tablet & desktop)
-*/
-@media only screen and (min-width: 480px) and (max-width: 839px) {
-
-}

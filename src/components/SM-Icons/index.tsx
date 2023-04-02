@@ -13,22 +13,22 @@ export const SmIcons:FC = () => {
         <ul className="Trk__flex Trk__direction--column">
           <li>
             <CustomLink component={Link} href="https://www.github.com/rkterungwa16">
-              <Image height={27} width={27} src="github_icon.svg" alt="github" />
+              <Image height={30} width={30} src="github_icon.svg" alt="github" />
             </CustomLink>
           </li>
           <li>
             <CustomLink component={Link} href="https://www.twitter.com/terkplumber">
-              <Image height={27} width={27} src="twitter_icon.svg" alt="twitter" />
+              <Image height={30} width={30} src="twitter_icon.svg" alt="twitter" />
             </CustomLink>
           </li>
           <li>
             <CustomLink component={Link} href="https://www.linkedin.com/in/terungwa-kombol-1034574a">
-              <Image height={27} width={27} src="linkedin_icon.svg" alt="linkedIn" />
+              <Image height={30} width={30} src="linkedin_icon.svg" alt="linkedIn" />
             </CustomLink>
           </li>
           <li>
             <CustomLink component={Link} href="https://www.youtube.com">
-              <Image height={27} width={27} src="youtube_icon.svg" alt="youtube" />
+              <Image height={30} width={30} src="youtube_icon.svg" alt="youtube" />
             </CustomLink>
           </li>
         </ul>

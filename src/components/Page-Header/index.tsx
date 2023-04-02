@@ -29,19 +29,20 @@ export const PageHeader = () => {
       <Nav className="Trk__dnone--md Trk__absolute--sm Trk__left--3" onClick={handleClick}>
         <IconButton>
           {
-            menuIsActive === false?
+            menuIsActive === false
+            ?
             ( <Bars3Icon /> )
             :
             ( < XMarkIcon /> )
           }
         </IconButton>
       </Nav>
-      <Nav className="Trk__dflex--sm Trk__justify-center--sm Trk__width-max--sm">
+      <Nav className="Trk__dflex--sm Trk__justify-center--sm Trk__width-max--sm ">
         <CustomLink component={Link} href={ClientRoutes.home}>
           <Image width={117} height={42} src="/logo.png" alt="Logo" />
         </CustomLink>
       </Nav>
-      <Nav className="Trk__dnone--sm">
+      <Nav className="Trk__dnone--sm ">
         <NavList>
           {Object.values(HeaderNavs).map((nav, index) => {
             const isActive = ClientRoutes[nav] === pathname;
@@ -62,7 +63,7 @@ export const PageHeader = () => {
           })}
         </NavList>
       </Nav>
-      <Nav className="Trk__dnone--sm">
+      <Nav className="Trk__dnone--sm ">
         <Button
         data-testid="thebtn"
           href={ClientRoutes.contact}

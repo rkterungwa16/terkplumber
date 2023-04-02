@@ -1084,6 +1084,10 @@ p,
   /*
     Class should display flex for tablet > 480px
   */
+  .Trk__dblock--md {
+    display: block;
+  }
+
   .Trk__dflex--md {
     display: flex;
   }
@@ -1180,7 +1184,7 @@ p,
 /*
   Perform this action for screens > 768px (small/large screens)
 */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 839px) {
   /*
     Class should not display for tablet screens > 786px
   */
