@@ -1,16 +1,22 @@
-.sm__handles {
-  top: 200px;
-  right: 35px;
-}
-
-.sm__handles ul {
-  gap: 25px;
+.first__section {
+  word-spacing: normal;
 }
 
 .underline {
-  width: 550.68px;
-  height: 32.57px;
-  padding-left: 75px;
+  width: 85%;
+}
+
+.underline img {
+  width: 100%;
+  object-fit: contain;
+  object-position: right top;
+}
+
+.summary {
+  max-width: 490px;
+  min-width: 330px;
+  font-size: 18px;
+  word-spacing: normal;
 }
 
 
@@ -19,15 +25,27 @@
 */
 @media only screen and (max-width: 480px) {
 
-  .sm__handles {
-    position: relative;
-    top: 700px;
-    left: 135px;
+  .intro p {
+    max-width: 350px;
   }
 
-  .sm__handles ul {
-    display: flex;
-    flex-direction: row;
+  .underline img {
+    width: 75%;
+
   }
 
+  .summary {
+    font-size: 16px;
+  }
+
+}
+
+/*
+  Perform this action for screens >= 480px (tablet)
+*/
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+
+  .underline {
+    width: 75%;
+  }
 }

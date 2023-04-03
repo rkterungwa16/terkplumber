@@ -15,8 +15,8 @@ html {
 }
 
 :root {
-  --black: #21243d;
-  --grey: #c5c5c5;
+  --black: #000000;
+  --grey: #788189;
   --red: #ff6464;
   --light-grey: #797f8b;
   --lighter-grey: #f6f6f6;
@@ -91,6 +91,11 @@ ul {
 .Trk__right--0 {
   right: 0;
 }
+
+.Trk__right--3 {
+  right: 1rem;
+}
+
 .Trk__border--none {
   border: none;
 }
@@ -961,6 +966,10 @@ p,
   /*
     Class should not display for mobile screens < 480px
   */
+  .text__body-mlarge--sm {
+    font-size: 2.2rem;
+  }
+
   .Trk__dnone--sm {
     display: none;
   }
@@ -1058,6 +1067,8 @@ p,
   .Trk__flex-wrap--sm {
     flex-wrap: wrap;
   }
+
+
 }
 /*
   Perform this action for screens > 480px (tablets)
@@ -1072,6 +1083,10 @@ p,
   /*
     Class should display flex for tablet > 480px
   */
+  .Trk__dblock--md {
+    display: block;
+  }
+
   .Trk__dflex--md {
     display: flex;
   }
@@ -1168,7 +1183,7 @@ p,
 /*
   Perform this action for screens > 768px (small/large screens)
 */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 839px) {
   /*
     Class should not display for tablet screens > 786px
   */
