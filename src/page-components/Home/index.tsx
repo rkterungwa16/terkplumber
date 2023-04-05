@@ -21,11 +21,13 @@ type Props = {
   start?: string;
   name?: string;
   occupation?: string;
+  section_two_title?: string;
+  my_details?: string[];
 }
-export const Home:React.FC<Props> = ({summary, start, name, occupation}) => {
+export const Home:React.FC<Props> = ({summary, start, name, occupation, section_two_title, my_details}) => {
 
   return <Layout>
-    <PageMain>
+    <PageMain className="Trk__flex Trk__direction--column">
     <SmIcons />
       <PageSection className={cx(styles.first__section, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
         <div className={cx(styles.intro,"font__weight--xbold Trk__LineHeight--6 Trk__text--center")}>
@@ -53,6 +55,33 @@ export const Home:React.FC<Props> = ({summary, start, name, occupation}) => {
           >
             Download Resume
           </Button>
+        </div>
+      </PageSection>
+
+      <PageSection className={cx(styles.about__section,"Trk__flex Trk__direction--column Trk__justify--around Trk__align--center")}>
+        <div className={cx(styles.about__me, "Trk__flex Trk__flex-column--sm Trk__align-center--sm")}>
+          <Image src="/photo.png" alt="Terungwa Kombol" width={400} height={450} />
+          <div className={cx(styles.__details, "Trk__flex Trk__direction--column Trk__align-center--sm")}>
+            <div className={cx(styles.detail__text, "Trk__flex Trk__direction--column Trk__align-center--sm")}>
+              <div className="Trk__flex Trk__align--center">
+                <Image src="/hyphen.png" width={39} height={8} alt="hypen"/>
+                <span data-testid="title-data">{section_two_title}</span>
+              </div>
+              {
+                my_details?.map((detail, idx) => (
+                  <p data-testid="detail-data" key={idx}>{detail}</p>
+                ))
+              }
+            </div>
+            <div className={cx(styles.hire__me)}>
+            <Button
+              color={ButtonColor.PRIMARY}
+              variant={ButtonVariant.STANDARD}
+            >
+              Hire me
+            </Button>
+            </div>
+          </div>
         </div>
       </PageSection>
     </PageMain>

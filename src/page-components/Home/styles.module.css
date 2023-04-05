@@ -1,5 +1,11 @@
 .first__section {
-  word-spacing: normal;
+
+  height: 530px;
+}
+
+.about__section {
+  margin-bottom: 50px;
+  height: 730px;
 }
 
 .underline {
@@ -9,7 +15,7 @@
 .underline img {
   width: 100%;
   object-fit: contain;
-  object-position: right top;
+  object-position: 80% 20%;
 }
 
 .summary {
@@ -19,6 +25,35 @@
   word-spacing: normal;
 }
 
+.about__me {
+
+  gap: 150px;
+}
+
+.__details {
+  gap: 80px;
+}
+
+.detail__text{
+  gap: 20px;
+}
+
+.detail__text > div {
+  gap: 8px;
+}
+
+.detail__text > div >span {
+  color: var(--light-brown);
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.detail__text p{
+  min-width: 513.59px;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+}
 
 /*
   Perform this action for screens < 480px (mobile)
@@ -36,6 +71,28 @@
 
   .summary {
     font-size: 16px;
+  }
+
+  .about__me {
+    gap: 50px;
+  }
+
+  .about__me > img {
+    height: 210px;
+    width: 190px;
+    border-radius: 15%;
+    border: 2px solid var(--light-brown);
+  }
+
+  .detail__text > div > span {
+    font-size: 29px;
+  }
+
+  .detail__text p{
+    min-width: 300px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
   }
 
 }
