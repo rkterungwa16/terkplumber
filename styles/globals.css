@@ -1019,6 +1019,10 @@ p,
     flex-grow: 1;
   }
 
+  .Trk__flex-row--sm {
+    flex-direction: row;
+  }
+
   .Trk__flex-column--sm {
     flex-direction: column;
   }
@@ -1128,6 +1132,10 @@ p,
 
   .Trk__grow-1--md {
     flex-grow: 1;
+  }
+
+  .Trk__flex-row--md {
+    flex-direction: row;
   }
 
   .Trk__flex-column--md {

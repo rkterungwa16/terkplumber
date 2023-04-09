@@ -1,21 +1,17 @@
-.about__section {
-  margin-bottom: 150px;
-}
-
-.underline {
+.first__underline {
   width: 85%;
 }
 
-.underline img {
+.first__underline img {
   width: 100%;
   object-fit: contain;
   object-position: 80% 20%;
 }
 
-.summary {
-  max-width: 490px;
-  min-width: 330px;
-  font-size: 18px;
+.first__summary {
+  max-width: 30.625rem;
+  min-width: 20.625rem;
+  font-size: 1.125rem;
   word-spacing: normal;
 }
 
@@ -26,29 +22,29 @@
 
 
 
-.__details {
-  gap: 80px;
+.about__details {
+  gap: 5rem;
 }
 
 .detail__text{
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .detail__text > div {
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .detail__text > div >span {
   color: var(--light-brown);
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 900;
 }
 
 .detail__text p{
 
   font-weight: 400;
-  font-size: 21px;
-  line-height: 26px;
+  font-size: 1.3125rem;
+  line-height: 1.625rem;
 }
 
 /*
@@ -56,26 +52,25 @@
 */
 @media only screen and (max-width: 480px) {
 
-  .intro p {
-    min-width: 350px;
+  .first__intro p {
+    min-width: 21.875rem;
   }
 
-  .intro p span {
-    font-size: 32px;
+  .first__intro p span {
+    font-size: 2rem;
   }
 
-  .underline img {
+  .first__underline img {
     width: 75%;
 
   }
 
-  .summary {
-    font-size: 16px;
+  .first__summary {
+    font-size: 1rem;
   }
 
   .about__me {
-    gap: 50px;
-    margin-top: 50px;
+    gap: 3.125rem;
   }
 
   .about__me > img {
@@ -85,19 +80,19 @@
     border: 2px solid var(--light-brown);
   }
 
-  .__details {
-    gap: 30px;
+  .about__details {
+    gap: 1.875rem;
   }
 
   .detail__text > div > span {
-    font-size: 29px;
+    font-size: 1.8125rem;
   }
 
   .detail__text p{
-    min-width: 300px;
+    min-width: 18.75rem;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.125rem;
   }
 
 }
@@ -107,7 +102,7 @@
 */
 @media only screen and (min-width: 480px) and (max-width: 839px) {
 
-  .underline {
+  .first__underline {
     width: 75%;
   }
 
@@ -117,7 +112,7 @@
 
   }
 
-  .__details {
-    gap: 30px;
+  .about__details {
+    gap: 1.875rem;
   }
 }

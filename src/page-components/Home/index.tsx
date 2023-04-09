@@ -30,19 +30,19 @@ export const Home: React.FC<Props> = ({ summary, start, name, occupation, sectio
     <PageMain className="Trk__flex Trk__direction--column ">
       <SmIcons />
       <PageSection className={cx(styles.first__section, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
-        <div className={cx(styles.intro, "font__weight--xbold Trk__LineHeight--6 Trk__text--center")}>
+        <div className={cx(styles.first__intro, "font__weight--xbold Trk__LineHeight--6 Trk__text--center")}>
           <p>
             <span className="black text__body--xlarge " data-testid="start-data">{start}</span> &#160; <span className="light-brown text__body--xlarge " data-testid="name-data">{name}</span><br />
             <span className="grey text__body--xlarge " data-testid="oc-data">{occupation}</span>
           </p>
 
         </div>
-        <div className={cx(styles.underline, "Trk__flex Trk__justify--end Trk__justify-center--sm Trk__align-start--sm")}>
+        <div className={cx(styles.first__underline, "Trk__flex Trk__justify--end Trk__justify-center--sm Trk__align-start--sm")}>
           <Image src="/Underline_07.png" alt="Underline" width={550} height={33} />
         </div>
 
 
-        <div className={cx(styles.summary, "Trk__flex Trk__mt--4 Trk__mb--4 Trk__mr--4 Trk__ml--4 Trk__width--md black font__weight--small Trk__LineHeight--2 Trk__text--center")}>
+        <div className={cx(styles.first__summary, "Trk__flex Trk__mt--4 Trk__mb--4 Trk__mr--4 Trk__ml--4 Trk__width--md black font__weight--small Trk__LineHeight--2 Trk__text--center")}>
           <p data-testid="sum-data">
             {summary}
           </p>
@@ -58,13 +58,13 @@ export const Home: React.FC<Props> = ({ summary, start, name, occupation, sectio
         </div>
       </PageSection>
 
-      <PageSection className={cx(styles.about__section, "Trk__flex Trk__direction--column Trk__justify--start Trk__align--center")}>
+      <PageSection className={cx(styles.about__section, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
 
         <div className={cx(styles.about__me, "Trk__flex Trk__flex-row--lg Trk__flex-column--md Trk__align-center--md Trk__flex-column--sm Trk__align-center--sm")}>
 
           <Image src="/photo.png" alt="Terungwa Kombol" width={400} height={450} />
 
-          <div className={cx(styles.__details, "Trk__flex Trk__direction--column Trk__align-start--lg Trk__align-center--md Trk__align-center--sm ")}>
+          <div className={cx(styles.about__details, "Trk__flex Trk__direction--column Trk__align-start--lg Trk__align-center--md Trk__align-center--sm ")}>
 
             <div className={cx(styles.detail__text, "Trk__flex Trk__direction--column Trk__align-start--lg Trk__align-center--md Trk__align-center--sm")}>
 
