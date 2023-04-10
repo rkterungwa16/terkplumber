@@ -29,7 +29,7 @@ export const Home: React.FC<Props> = ({ summary, start, name, occupation, sectio
   return <Layout>
     <PageMain className="Trk__flex Trk__direction--column ">
       <SmIcons />
-      <PageSection className={cx(styles.first__section, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
+      <PageSection className={cx(styles.home__first, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
         <div className={cx(styles.first__intro, "font__weight--xbold Trk__LineHeight--6 Trk__text--center")}>
           <p>
             <span className="black text__body--xlarge " data-testid="start-data">{start}</span> &#160; <span className="light-brown text__body--xlarge " data-testid="name-data">{name}</span><br />
@@ -58,7 +58,7 @@ export const Home: React.FC<Props> = ({ summary, start, name, occupation, sectio
         </div>
       </PageSection>
 
-      <PageSection className={cx(styles.about__section, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
+      <PageSection className={cx(styles.home__about, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
 
         <div className={cx(styles.about__me, "Trk__flex Trk__flex-row--lg Trk__flex-column--md Trk__align-center--md Trk__flex-column--sm Trk__align-center--sm")}>
 
@@ -72,12 +72,15 @@ export const Home: React.FC<Props> = ({ summary, start, name, occupation, sectio
                 <Image src="/hyphen.png" width={39} height={8} alt="hypen" />
                 <span data-testid="title-data">{section_two_title}</span>
               </div>
+
               {
                 my_details?.map((detail, idx) => (
                   <p data-testid="detail-data" key={idx}>{detail}</p>
                 ))
               }
+
             </div>
+
             <div className={cx(styles.hire__me)}>
               <Button
                 color={ButtonColor.PRIMARY}
@@ -85,9 +88,13 @@ export const Home: React.FC<Props> = ({ summary, start, name, occupation, sectio
               >
                 Hire me
               </Button>
+
             </div>
+
           </div>
+
         </div>
+
       </PageSection>
     </PageMain>
   </Layout>;
