@@ -9,8 +9,8 @@ import styles from "./styles.module.css";
 
 export const SmIcons:FC = () => {
   return(
-      <div className={cx(styles.sm__handles, "Trk__fixed")}>
-        <ul className="Trk__flex Trk__direction--column">
+      <div className={cx(styles.sm__handles, "Trk__fixed Trk__flex Trk__align-center--lg Trk__align-center--md Trk__align-center--sm ")}>
+        <ul className="Trk__flex Trk__flex-column--lg Trk__flex-row--md Trk__justify-evenly--md Trk__flex-row--sm Trk__justify-around--sm ">
           <li>
             <CustomLink component={Link} href="https://www.github.com/rkterungwa16">
               <Image height={30} width={30} src="github_icon.svg" alt="github" />

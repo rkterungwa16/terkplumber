@@ -26,4 +26,22 @@ describe('Home', () => {
       const theOccupation = screen.getByTestId('oc-data').textContent;
       expect(theOccupation).toEqual("I'm a software developer");
     })
+
+    it('verifies section two title props exists ', () => {
+      render(<Home section_two_title={"About Me"} />)
+      const title = screen.getByTestId('title-data').textContent;
+      expect(title).toEqual("About Me");
+    })
+
+    it("verifies there is a valid src attribute value of '/photo.png'", () => {
+      render(<Home />);
+      const contactBttn = screen.getByRole("img", { name: "Terungwa Kombol"});
+      expect(contactBttn.getAttribute('src')).toBe('/_next/image?url=%2Fphoto.png&w=828&q=75');
+    });
+
+    it('verifies my_details props exists ', () => {
+      render(<Home my_details={['first test detail', 'second test detail']} />)
+      const detail = screen.getAllByTestId('detail-data');
+      expect(detail).toHaveLength(2);
+    })
 })

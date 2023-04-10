@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 4.3rem;
-  padding: 0rem 3.125rem;
+  padding: 0rem 6.5rem;
 }
 
 .Page__nav--active {
@@ -22,4 +22,23 @@
 
 .Page__nav:hover {
   color: #60BB46;
+}
+
+/*
+  Perform this action for screens < 480px (mobile)
+*/
+@media only screen and (max-width: 480px) {
+
+
+}
+
+/*
+  Perform this action for screens > 480px & < 768px (tablet & desktop)
+*/
+@media only screen and (min-width: 480px) and (max-width: 839px) {
+
+  .Page__header {
+    padding: 0rem 3.5rem;
+  }
+
 }
