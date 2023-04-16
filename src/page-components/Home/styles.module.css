@@ -41,11 +41,25 @@
 }
 
 .detail__text p{
-
   font-weight: 400;
   font-size: 1.3125rem;
   line-height: 1.625rem;
 }
+
+.home__skills {
+  margin: 1rem 0;
+}
+.skills__title{
+  color: var(--light-brown);
+  font-weight: 900;
+  font-size: 2.4375rem;
+  padding-bottom: 2rem;
+}
+.skills__list {
+  width: 100%;
+  gap: 1.5rem;
+}
+
 
 /*
   Perform this action for screens < 480px (mobile)
@@ -93,6 +107,10 @@
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.125rem;
+  }
+
+  .skills__title {
+    font-size: 1.8125rem;
   }
 
 }

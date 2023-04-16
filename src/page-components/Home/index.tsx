@@ -1,4 +1,5 @@
 
+import { FC, ReactElement } from "react";
 import Image from "next/image";
 import cx from "classnames";
 
@@ -7,12 +8,12 @@ import { PageMain } from "@components/Page-Main";
 import { PageSection } from "@components/Page-Section";
 import { Button } from "@components/Button";
 import { SmIcons } from "@components/SM-Icons";
+import { FlipCard } from "@components/Flip-card";
+import { HorizontalScroller } from "@components/Horizontal-scroller";
 import {
   ButtonColor,
   ButtonVariant,
 } from "@components/Button/constants";
-
-
 
 import styles from "./styles.module.css";
 
@@ -22,10 +23,15 @@ type Props = {
   name?: string;
   occupation?: string;
   section_two_title?: string;
+  section_three_title?: string;
   my_details?: string[];
 }
-export const Home: React.FC<Props> = ({ summary, start, name, occupation, section_two_title, my_details }) => {
-
+export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_title, section_three_title, my_details }) => {
+  const skills_data = [
+    {frontImage: "/react_skill.png", backImage: "/skill_card_back.png", altVal: "React skill"},
+    {frontImage: "/nodejs_skill.png", backImage: "/skill_card_back.png", altVal: "Nodejs skill"},
+    {frontImage: "/css3_skill.png", backImage: "/skill_card_back.png", altVal: "CSS3 skill"},
+  ];
   return <Layout>
     <PageMain className="Trk__flex Trk__direction--column ">
       <SmIcons />
@@ -95,6 +101,20 @@ export const Home: React.FC<Props> = ({ summary, start, name, occupation, sectio
 
         </div>
 
+      </PageSection>
+
+      <PageSection className={cx(styles.home__skills, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
+          <span className={cx(styles.skills__title)}>{section_three_title}</span>
+          <div className={cx(styles.skills__list, "Trk__flex Trk__justify-between--lg Trk__align-center--lg Trk__flex-row--lg Trk__flex-column--md Trk__align-center--md Trk__dnone--sm")}>
+            {
+             skills_data.map((item, idx): ReactElement => (
+              <FlipCard key={idx} frontImage={item.frontImage} backImage={item.backImage} altVal={item.altVal} />
+             ))
+            }
+          </div>
+          <div className={cx(styles.skills_list,"Trk__flex Trk__align-center--sm Trk__justify-center--sm Trk__dnone--lg Trk__dnone--md")}>
+            <HorizontalScroller scrollItems={skills_data} />
+          </div>
       </PageSection>
     </PageMain>
   </Layout>;
