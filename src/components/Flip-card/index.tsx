@@ -22,12 +22,11 @@ export const FlipCard:FC<FlipCardProps> = ({frontImage, backImage, altVal}) => {
     <div className={cx(styles.flip__card)} onClick={handleClick}>
       <div className={cx(styles.card__content, flipped === true ? styles.flip__it : "")} >
           <div className={styles.content__front}>
-            <Image src={frontImage} alt={altVal} width={344} height={288}/>
+            <Image data-testid="front" src={frontImage} alt={altVal} width={344} height={288}/>
           </div>
           <div className={styles.content__back}>
-            <Image src={backImage} alt={altVal} width={344} height={288}/>
+            <Image data-testid="back" src={backImage} alt={altVal} width={344} height={288}/>
           </div>
-
       </div>
     </div>
   );

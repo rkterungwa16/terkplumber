@@ -1,6 +1,13 @@
 import { Home } from ".";
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom';
+//import "../../__mocks__/intersectionObserverMock";
+//import IntersectionObserverMock from '../../__mocks__/intersectionObserverMock';
+import MockIntersectionObserver from "../../__mock__/mockIntersectionObserver";
+
+window.IntersectionObserver = MockIntersectionObserver;
+
+
 
 describe('Home', () => {
     it('verifies summary props exists ', () => {
@@ -43,5 +50,11 @@ describe('Home', () => {
       render(<Home my_details={['first test detail', 'second test detail']} />)
       const detail = screen.getAllByTestId('detail-data');
       expect(detail).toHaveLength(2);
+    });
+
+    it('verifies section three title props exists ', () => {
+      render(<Home section_three_title={"My Skills"} />)
+      const title = screen.getByTestId('third-title-data').textContent;
+      expect(title).toEqual("My Skills");
     })
 })

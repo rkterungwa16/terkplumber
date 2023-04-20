@@ -104,7 +104,7 @@ export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_
       </PageSection>
 
       <PageSection className={cx(styles.home__skills, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
-          <span className={cx(styles.skills__title)}>{section_three_title}</span>
+          <span className={cx(styles.skills__title)} data-testid="third-title-data">{section_three_title}</span>
           <div className={cx(styles.skills__list, "Trk__flex Trk__justify-between--lg Trk__align-center--lg Trk__flex-row--lg Trk__flex-column--md Trk__align-center--md Trk__dnone--sm")}>
             {
              skills_data.map((item, idx): ReactElement => (
@@ -113,7 +113,13 @@ export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_
             }
           </div>
           <div className={cx(styles.skills_list,"Trk__flex Trk__align-center--sm Trk__justify-center--sm Trk__dnone--lg Trk__dnone--md")}>
-            <HorizontalScroller scrollItems={skills_data} />
+            <HorizontalScroller>
+              {
+              skills_data.map((item, idx): ReactElement => (
+                <FlipCard key={idx} frontImage={item.frontImage} backImage={item.backImage} altVal={item.altVal} />
+              ))
+              }
+            </HorizontalScroller>
           </div>
       </PageSection>
     </PageMain>
