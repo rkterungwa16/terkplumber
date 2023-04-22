@@ -26,10 +26,21 @@
   transform-style: preserve-3d;
 }
 
+.content__front .flipCard__inner,
+.content__back .flipCard__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(80px) scale(0.94);
+  padding: 1.5em;
+}
+
 .content__front {
   background-color: #fff;
 	background-size: cover;
 	background-position: center center;
+
 }
 	.content__front::after {
 		content: '';
@@ -40,15 +51,29 @@
 		height: 100%;
 		display: block;
 		border-radius: 6px;
+    border: 1px solid var(--light-brown);
 		backface-visibility: hidden;
-		background: var(--light-brown)
+    background: linear-gradient(
+			40deg,
+			rgba(255, 255, 255, 0.7),
+			rgba(255, 255, 255, 0.7)
+		);
+
 	}
+
+  .content__front .flipCard__inner {
+    gap: 0.8rem;
+  }
 
 
 .content__front img {
   object-position: center center ;
   object-fit: cover;
   transform: translateZ(80px) scale(0.94);
+}
+
+.content__front .flipCard__title {
+  text-transform: capitalize;
 }
 
 .content__back img {

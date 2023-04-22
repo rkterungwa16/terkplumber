@@ -1,5 +1,5 @@
 
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, useState } from "react";
 import Image from "next/image";
 import cx from "classnames";
 
@@ -9,11 +9,14 @@ import { PageSection } from "@components/Page-Section";
 import { Button } from "@components/Button";
 import { SmIcons } from "@components/SM-Icons";
 import { FlipCard } from "@components/Flip-card";
+
 import { HorizontalScroller } from "@components/Horizontal-scroller";
 import {
   ButtonColor,
   ButtonVariant,
 } from "@components/Button/constants";
+
+import skills from "../../skill-data.json";
 
 import styles from "./styles.module.css";
 
@@ -27,11 +30,13 @@ type Props = {
   my_details?: string[];
 }
 export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_title, section_three_title, my_details }) => {
-  const skills_data = [
-    {frontImage: "/react_skill.png", backImage: "/skill_card_back.png", altVal: "React skill"},
-    {frontImage: "/nodejs_skill.png", backImage: "/skill_card_back.png", altVal: "Nodejs skill"},
-    {frontImage: "/css3_skill.png", backImage: "/skill_card_back.png", altVal: "CSS3 skill"},
-  ];
+
+ /* const skills_data = [
+    {skillTitle: "react js", skilCompetences: "UI Design, Prototyping", frontImage: "/react-icon.png", altVal: "React skill", skillDetails: [{title: 'peaq website', stack: 'redux, jotai & tailwind'},{title: 'LLF', stack: 'redux, jotai & tailwind'},{title: 'peaq website', stack: 'react-transition-group & strapi'}]},
+    {skillTitle: "react js", skilCompetences: "UI Design, Prototyping", frontImage: "/node-icon.png", altVal: "Nodejs skill", skillDetails: [{title: 'peaq website', stack: 'redux, jotai & tailwind'},{title: 'LLF', stack: 'redux, jotai & tailwind'},{title: 'peaq website', stack: 'react-transition-group & strapi'}]},
+    {skillTitle: "react js", skilCompetences: "UI Design, Prototyping", frontImage: "/css3-icon.png", altVal: "CSS3 skill", skillDetails: [{title: 'peaq website', stack: 'redux, jotai & tailwind'},{title: 'LLF', stack: 'redux, jotai & tailwind'},{title: 'peaq website', stack: 'react-transition-group & strapi'}]},
+  ];*/
+
   return <Layout>
     <PageMain className="Trk__flex Trk__direction--column ">
       <SmIcons />
@@ -107,16 +112,16 @@ export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_
           <span className={cx(styles.skills__title)} data-testid="third-title-data">{section_three_title}</span>
           <div className={cx(styles.skills__list, "Trk__flex Trk__justify-between--lg Trk__align-center--lg Trk__flex-row--lg Trk__flex-column--md Trk__align-center--md Trk__dnone--sm")}>
             {
-             skills_data.map((item, idx): ReactElement => (
-              <FlipCard key={idx} frontImage={item.frontImage} backImage={item.backImage} altVal={item.altVal} />
+             skills.map((item, idx): ReactElement => (
+                <FlipCard key={idx} skillTitle={item.skillTitle} skillCompetences={item.skillCompetences} frontImage={item.frontImage} altVal={item.altVal} skillDetails={item.skillDetails} />
              ))
             }
           </div>
           <div className={cx(styles.skills_list,"Trk__flex Trk__align-center--sm Trk__justify-center--sm Trk__dnone--lg Trk__dnone--md")}>
             <HorizontalScroller>
               {
-              skills_data.map((item, idx): ReactElement => (
-                <FlipCard key={idx} frontImage={item.frontImage} backImage={item.backImage} altVal={item.altVal} />
+              skills.map((item, idx): ReactElement => (
+                <FlipCard key={idx} skillTitle={item.skillTitle} skillCompetences={item.skillCompetences} frontImage={item.frontImage} altVal={item.altVal} skillDetails={item.skillDetails} />
               ))
               }
             </HorizontalScroller>
