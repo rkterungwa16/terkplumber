@@ -16,9 +16,8 @@ import {
   ButtonVariant,
 } from "@components/Button/constants";
 
-import skills from "../../skill-data.json";
-
 import styles from "./styles.module.css";
+import { Skills } from "types";
 
 type Props = {
   summary?: string;
@@ -28,14 +27,9 @@ type Props = {
   section_two_title?: string;
   section_three_title?: string;
   my_details?: string[];
+  skills: Skills[];
 }
-export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_title, section_three_title, my_details }) => {
-
- /* const skills_data = [
-    {skillTitle: "react js", skilCompetences: "UI Design, Prototyping", frontImage: "/react-icon.png", altVal: "React skill", skillDetails: [{title: 'peaq website', stack: 'redux, jotai & tailwind'},{title: 'LLF', stack: 'redux, jotai & tailwind'},{title: 'peaq website', stack: 'react-transition-group & strapi'}]},
-    {skillTitle: "react js", skilCompetences: "UI Design, Prototyping", frontImage: "/node-icon.png", altVal: "Nodejs skill", skillDetails: [{title: 'peaq website', stack: 'redux, jotai & tailwind'},{title: 'LLF', stack: 'redux, jotai & tailwind'},{title: 'peaq website', stack: 'react-transition-group & strapi'}]},
-    {skillTitle: "react js", skilCompetences: "UI Design, Prototyping", frontImage: "/css3-icon.png", altVal: "CSS3 skill", skillDetails: [{title: 'peaq website', stack: 'redux, jotai & tailwind'},{title: 'LLF', stack: 'redux, jotai & tailwind'},{title: 'peaq website', stack: 'react-transition-group & strapi'}]},
-  ];*/
+export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_title, section_three_title, my_details, skills }) => {
 
   return <Layout>
     <PageMain className="Trk__flex Trk__direction--column ">
@@ -113,17 +107,13 @@ export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_
           <div className={cx(styles.skills__list, "Trk__flex Trk__justify-between--lg Trk__align-center--lg Trk__flex-row--lg Trk__flex-column--md Trk__align-center--md Trk__dnone--sm")}>
             {
              skills.map((item, idx): ReactElement => (
-                <FlipCard key={idx} skillTitle={item.skillTitle} skillCompetences={item.skillCompetences} frontImage={item.frontImage} altVal={item.altVal} skillDetails={item.skillDetails} />
+              <FlipCard key={idx} skill={item} />
              ))
             }
           </div>
           <div className={cx(styles.skills_list,"Trk__flex Trk__align-center--sm Trk__justify-center--sm Trk__dnone--lg Trk__dnone--md")}>
             <HorizontalScroller>
-              {
-              skills.map((item, idx): ReactElement => (
-                <FlipCard key={idx} skillTitle={item.skillTitle} skillCompetences={item.skillCompetences} frontImage={item.frontImage} altVal={item.altVal} skillDetails={item.skillDetails} />
-              ))
-              }
+              { skills }
             </HorizontalScroller>
           </div>
       </PageSection>

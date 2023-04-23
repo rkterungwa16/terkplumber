@@ -30,7 +30,8 @@ export enum ButtonSize {
 export const defaultColorClasses = {
   [ButtonColor.DEFAULT]: styles["Button--default"],
   [ButtonColor.PRIMARY]: styles["Button--primary"],
-  [ButtonColor.SECONDARY]: styles["Button--secondary"]
+  [ButtonColor.SECONDARY]: styles["Button--secondary"],
+  [ButtonColor.WHITE]: styles["Button--white"]
 }
 
 export const defaultDisabledClass = styles["Button--disabled"];

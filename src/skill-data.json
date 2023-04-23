@@ -4,8 +4,7 @@
     "skillCompetences": "UI Design, Prototyping",
     "frontImage": "/react-icon.png",
     "altVal": "React skill",
-    "skillDetails":
-    [
+    "skillDetails":[
       {
         "title": "peaq website",
         "stack": "redux, jotai & tailwind"
@@ -21,12 +20,11 @@
     ]
   },
   {
-    "skillTitle": "node skill",
+    "skillTitle": "node",
     "skillCompetences": "UI Design, Prototyping",
     "frontImage": "/node-icon.png",
     "altVal": "Nodejs skill",
-    "skillDetails":
-    [
+    "skillDetails":[
       {
         "title": "peaq website",
         "stack": "redux, jotai & tailwind"
@@ -42,12 +40,11 @@
     ]
   },
   {
-    "skillTitle": "css3 skill",
+    "skillTitle": "css",
     "skillCompetences": "UI Design, Prototyping",
     "frontImage": "/css3-icon.png",
     "altVal": "CSS3 skill",
-    "skillDetails":
-    [
+    "skillDetails":[
       {
         "title": "peaq website",
         "stack": "redux, jotai & tailwind"

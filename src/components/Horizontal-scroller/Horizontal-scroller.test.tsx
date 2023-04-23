@@ -1,29 +1,32 @@
-import React, { FC, ReactElement } from "react";
+import React, { Children, FC, ReactElement } from "react";
 import { render } from "@testing-library/react";
 import Image from "next/image";
 
 import { HorizontalScroller } from "@components/Horizontal-scroller";
+import { Skills } from "types";
 
 import MockIntersectionObserver from "../../__mock__/mockIntersectionObserver";
 
 
-const skills_data = [
-  {frontImage: "/react_skill.png", backImage: "/skill_card_back.png", altVal: "React skill"},
-  {frontImage: "/nodejs_skill.png", backImage: "/skill_card_back.png", altVal: "Nodejs skill"},
-  {frontImage: "/css3_skill.png", backImage: "/skill_card_back.png", altVal: "CSS3 skill"},
+const skills = [
+  { title:"react js", icon: "/react_icon.png", iconAlt: "react skill" },
+  { title:"node", icon: "/node_icon.png", iconAlt: "node skill" },
+  { title:"css", icon: "/css3_icon.png", iconAlt: "css3 skill" },
 ];
 
 type TestProps = {
-  frontImage: string,
-  backImage: string,
-  altVal: string,
+  children: Skills[]
 }
 
-const TestComp:FC<TestProps> = ({frontImage, backImage, altVal}) => {
+const TestComp:FC<TestProps> = ({children}) => {
   return(
     <div>
-      <Image src={frontImage} width={20} height={20} alt={altVal} />
-      <Image src={backImage} width={20} height={20} alt={altVal} />
+      {
+      children.map((child, idx) => (
+        <Image key={idx} src={child.icon} width={20} height={20} alt={child.iconAlt} />
+      ))
+      }
+
     </div>
   )
 }
@@ -35,11 +38,7 @@ describe('The horizontal scroll', () => {
 it("recieved children props of length 3", () => {
   const { getByTestId } = render(
     <HorizontalScroller>
-                {
-                  skills_data.map((item, idx): ReactElement => (
-                    <TestComp key={idx} frontImage={item.frontImage} backImage={item.backImage} altVal={item.altVal} />
-                  ))
-                }
+      {skills}
     </HorizontalScroller>
   );
   const list = getByTestId("list");

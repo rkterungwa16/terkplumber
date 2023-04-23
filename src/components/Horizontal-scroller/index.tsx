@@ -2,22 +2,15 @@ import React, { FC, ReactElement, useRef, createRef, useEffect } from "react";
 import { FlipCard } from "@components/Flip-card";
 import cx from "classnames";
 import { useIntersectionTracker } from "@components/useIntersectionTracker/useIntersectionTracker";
+
+import { Skills } from "types";
+
 import styles from "./styles.module.css";
 
-interface ChildProps {
-  frontImage: string,
-  backImage: string,
-  altVal: string,
+type HSProps = {
+  children: Skills[];
 }
-
-interface Props {
-  props: ChildProps,
-}
-
-interface HSProps {
-  children: Props[],
-}
-export const HorizontalScroller:FC<HSProps> = ({ children }) => {
+export const HorizontalScroller:FC<HSProps> = ({children}) => {
 
   //add a ref to each item element
   const itemsRef = useRef(Array.from({length: children.length}, _ => createRef<HTMLLIElement>()));
@@ -44,9 +37,9 @@ useEffect(() => {
     <div className={styles.HS__viewport}>
       <ul  data-testid="list"  ref={listRef} className={styles.HS__list}>
         {
-          children?.map(({props}, idx): ReactElement => (
+          children?.map((child, idx): ReactElement => (
             <li className={styles.HS__item} ref={itemsRef.current[idx]} key={idx}>
-              <FlipCard frontImage={props.frontImage} backImage={props.backImage} altVal={props.altVal} />
+              <FlipCard skill={child} />
             </li>
           ))
         }
