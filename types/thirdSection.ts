@@ -1,3 +1,8 @@
+export type ThirdSection = {
+  sec_three_title: string;
+  skills: Skills[];
+}
+
 export type Skills = {
   title: string;
   competences: string;
@@ -7,6 +12,6 @@ export type Skills = {
 }
 
 export type Details = {
-    title: string;
-    stack: string;
+  title: string;
+  stack: string;
 }

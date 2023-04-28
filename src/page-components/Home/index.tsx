@@ -27,7 +27,7 @@ type Props = {
   section_two_title?: string;
   section_three_title?: string;
   my_details?: string[];
-  skills: Skills[];
+  skills?: Skills[];
 }
 export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_title, section_three_title, my_details, skills }) => {
 
@@ -104,16 +104,16 @@ export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_
 
       <PageSection className={cx(styles.home__skills, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
           <span className={cx(styles.skills__title)} data-testid="third-title-data">{section_three_title}</span>
-          <div className={cx(styles.skills__list, "Trk__flex Trk__justify-between--lg Trk__align-center--lg Trk__flex-row--lg Trk__flex-column--md Trk__align-center--md Trk__dnone--sm")}>
+          <div data-testid="skill-data" className={cx(styles.skills__list, "Trk__flex Trk__justify-between--lg Trk__align-center--lg Trk__flex-row--lg Trk__flex-column--md Trk__align-center--md Trk__dnone--sm")}>
             {
-             skills.map((item, idx): ReactElement => (
+             skills?.map((item, idx): ReactElement => (
               <FlipCard key={idx} skill={item} />
              ))
             }
           </div>
           <div className={cx(styles.skills_list,"Trk__flex Trk__align-center--sm Trk__justify-center--sm Trk__dnone--lg Trk__dnone--md")}>
             <HorizontalScroller>
-              { skills }
+              { skills! }
             </HorizontalScroller>
           </div>
       </PageSection>

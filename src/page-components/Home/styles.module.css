@@ -1,3 +1,6 @@
+.first__intro p span {
+  text-transform: capitalize;
+}
 .first__underline {
   width: 85%;
 }
@@ -38,6 +41,7 @@
   color: var(--light-brown);
   font-size: 2.5rem;
   font-weight: 900;
+  text-transform: capitalize;
 }
 
 .detail__text p{
@@ -53,6 +57,7 @@
   color: var(--light-brown);
   font-weight: 900;
   font-size: 2.4375rem;
+  text-transform: capitalize;
   padding-bottom: 2rem;
 }
 .skills__list {

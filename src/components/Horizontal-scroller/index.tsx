@@ -13,10 +13,10 @@ type HSProps = {
 export const HorizontalScroller:FC<HSProps> = ({children}) => {
 
   //add a ref to each item element
-  const itemsRef = useRef(Array.from({length: children.length}, _ => createRef<HTMLLIElement>()));
+  const itemsRef = useRef(Array.from({length: children?.length}, _ => createRef<HTMLLIElement>()));
 
   //add a ref to each signal element
-  const signalsRef = useRef(Array.from({length: children.length}, _ => createRef<HTMLLIElement>()));
+  const signalsRef = useRef(Array.from({length: children?.length}, _ => createRef<HTMLLIElement>()));
 
   const listRef = useRef<HTMLUListElement>(null);
 
@@ -45,9 +45,9 @@ useEffect(() => {
         }
       </ul>
 
-      <ul className={styles.HS__signalList} aria-hidden>
+      <ul data-testid="signal" className={styles.HS__signalList} aria-hidden>
         {
-          Array.from({length: children.length}, (_, idx) => (
+          Array.from({length: children?.length}, (_, idx) => (
             <li key={idx} ref={signalsRef.current[idx]} className={cx(styles.HS__signal, "")}></li>
           ))
         }

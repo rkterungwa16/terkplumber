@@ -29,9 +29,9 @@ const { title, icon, competences, iconAlt, details}  = skill;
       <div className={cx(styles.card__content, flipped === true ? styles.flip__it : "")} >
           <div className={styles.content__front}>
             <div className={styles.flipCard__inner}>
-              <Image data-testid="front" src={icon} alt={iconAlt} width={130} height={130}/>
-              <span className={styles.contentFront__title}>{title}</span>
-              <div className={styles.contentFront__competences}>{competences}</div>
+              <Image data-testid="icon-data" src={icon} alt={iconAlt} width={130} height={130}/>
+              <span data-testid="title-data" className={styles.contentFront__title}>{title}</span>
+              <div data-testid="competences-data" className={styles.contentFront__competences}>{competences}</div>
               <div className={styles.flipCard__detailsLink} onClick={handleClick}>
                 <CustomLink
                       className={styles.contentFront__details}
@@ -48,7 +48,7 @@ const { title, icon, competences, iconAlt, details}  = skill;
           <div className={styles.content__back}>
             <div className={styles.flipCard__inner}>
               <div className={styles.flipCard__skill__details}>
-                <ul>
+                <ul data-testid="details-data">
                   {
                     details?.map((detail, idx )=> (
                       <li key={idx}>

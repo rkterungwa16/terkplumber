@@ -91,12 +91,12 @@
 
 .content__front .flipCard__inner .flipCard__detailsLink > :nth-child(1){
   text-transform: capitalize;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: #09a311;
 }
 
 .content__front .flipCard__inner .flipCard__detailsLink > :nth-child(2){
-  height: 1.2rem;
+  height: 0.9rem;
   width: 2rem;
 }
 
@@ -106,7 +106,6 @@
   object-fit: cover;
 
 }
-
 
 .content__back {
   transform: rotateY(180deg);
@@ -165,6 +164,7 @@
 }
 
 .backButton__icon {
+  display: block;
   width: 4rem;
   height: 1.5rem;
 }

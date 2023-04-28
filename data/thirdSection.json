@@ -1,0 +1,61 @@
+{
+  "sec_three_title": "my skills",
+  "skills": [{
+      "title": "react js",
+      "competences": "UI Design, Prototyping",
+      "icon": "/react-icon.png",
+      "iconAlt": "React skill",
+      "details": [{
+          "title": "peaq website",
+          "stack": "redux, jotai & tailwind"
+        },
+        {
+          "title": "LLF",
+          "stack": "react-transition-group & strapi"
+        },
+        {
+          "title": "peaq website",
+          "stack": "redux, jotai & tailwind"
+        }
+      ]
+    },
+    {
+      "title": "node",
+      "competences": "UI Design, Prototyping",
+      "icon": "/node-icon.png",
+      "iconAlt": "Nodejs skill",
+      "details": [{
+          "title": "peaq website",
+          "stack": "redux, jotai & tailwind"
+        },
+        {
+          "title": "LLF",
+          "stack": "react-transition-group & strapi"
+        },
+        {
+          "title": "peaq website",
+          "stack": "redux, jotai & tailwind"
+        }
+      ]
+    },
+    {
+      "title": "css",
+      "competences": "UI Design, Prototyping",
+      "icon": "/css3-icon.png",
+      "iconAlt": "CSS3 skill",
+      "details": [{
+          "title": "peaq website",
+          "stack": "redux, jotai & tailwind"
+        },
+        {
+          "title": "LLF",
+          "stack": "react-transition-group & strapi"
+        },
+        {
+          "title": "peaq website",
+          "stack": "redux, jotai & tailwind"
+        }
+      ]
+    }
+  ]
+}
