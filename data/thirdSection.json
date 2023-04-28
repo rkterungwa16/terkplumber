@@ -1,5 +1,5 @@
 {
-  "sec_three_title": "my skills",
+  "thirdSectionTitle": "my skills",
   "skills": [{
       "title": "react js",
       "competences": "UI Design, Prototyping",

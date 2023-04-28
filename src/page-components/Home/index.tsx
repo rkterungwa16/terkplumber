@@ -24,12 +24,12 @@ type Props = {
   start?: string;
   name?: string;
   occupation?: string;
-  section_two_title?: string;
-  section_three_title?: string;
-  my_details?: string[];
+  secondSectionTitle?: string;
+  thirdSectionTitle?: string;
+  myDetails?: string[];
   skills?: Skills[];
 }
-export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_title, section_three_title, my_details, skills }) => {
+export const Home: FC<Props> = ({ summary, start, name, occupation, secondSectionTitle, thirdSectionTitle, myDetails, skills }) => {
 
   return <Layout>
     <PageMain className="Trk__flex Trk__direction--column ">
@@ -75,11 +75,11 @@ export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_
 
               <div className="Trk__flex Trk__align--center Trk__align-center--md">
                 <Image src="/hyphen.png" width={39} height={8} alt="hypen" />
-                <span data-testid="title-data">{section_two_title}</span>
+                <span data-testid="title-data">{secondSectionTitle}</span>
               </div>
 
               {
-                my_details?.map((detail, idx) => (
+                myDetails?.map((detail, idx) => (
                   <p data-testid="detail-data" key={idx}>{detail}</p>
                 ))
               }
@@ -103,7 +103,7 @@ export const Home: FC<Props> = ({ summary, start, name, occupation, section_two_
       </PageSection>
 
       <PageSection className={cx(styles.home__skills, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
-          <span className={cx(styles.skills__title)} data-testid="third-title-data">{section_three_title}</span>
+          <span className={cx(styles.skills__title)} data-testid="third-title-data">{thirdSectionTitle}</span>
           <div data-testid="skill-data" className={cx(styles.skills__list, "Trk__flex Trk__justify-between--lg Trk__align-center--lg Trk__flex-row--lg Trk__flex-column--md Trk__align-center--md Trk__dnone--sm")}>
             {
              skills?.map((item, idx): ReactElement => (

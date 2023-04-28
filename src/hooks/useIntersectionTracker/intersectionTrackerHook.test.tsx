@@ -45,7 +45,6 @@ const Observed = () => {
 };
 
 it("creates an observer", () => {
- // const callback = jest.fn();
   const { getByTestId } = render(<Observed  />);
   const list = getByTestId("list");
   console.log('the list',list)

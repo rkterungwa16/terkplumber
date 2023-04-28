@@ -1,5 +1,5 @@
-// copied from https://jaketrent.com/post/test-intersection-observer-react/
- // who adapted it from https://github.com/thebuilder/react-intersection-observer/blob/d35365990136bfbc99ce112270e5ff232cf45f7f/src/test-helper.ts
+
+ // adopted from https://github.com/thebuilder/react-intersection-observer/blob/d35365990136bfbc99ce112270e5ff232cf45f7f/src/test-helper.ts
 const observerMap = new Map();
 const instanceMap = new Map();
 

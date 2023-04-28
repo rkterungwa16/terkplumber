@@ -1,4 +1,4 @@
 export type SecondSection = {
-  sec_two_title: string;
+  secondSectionTitle: string;
   details: string[];
 }

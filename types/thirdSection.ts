@@ -1,5 +1,5 @@
 export type ThirdSection = {
-  sec_three_title: string;
+  thirdSectionTitle: string;
   skills: Skills[];
 }
 

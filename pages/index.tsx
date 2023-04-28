@@ -4,7 +4,6 @@ import { Home } from "../src/page-components";
 import { Skills } from "types";
 import { FirstSection, SecondSection, ThirdSection } from "types";
 
-//{ id: number; name: string }[]
 type Props = {
   skills: Skills[];
   data: [FirstSection, SecondSection, ThirdSection] ;
@@ -13,8 +12,8 @@ type Props = {
 const HomePage:FC<Props> = ({data}) => {
 
 const { start, name, occupation, summary } = data[0];
-const { sec_two_title, details } = data[1];
-const { sec_three_title, skills } = data[2];
+const { secondSectionTitle, details } = data[1];
+const { thirdSectionTitle, skills } = data[2];
 
   return (
     <>
@@ -23,9 +22,9 @@ const { sec_three_title, skills } = data[2];
         name={name}
         occupation= {occupation}
         summary={summary}
-        section_two_title={sec_two_title}
-        my_details={details}
-        section_three_title={sec_three_title}
+        secondSectionTitle={secondSectionTitle}
+        myDetails={details}
+        thirdSectionTitle={thirdSectionTitle}
         skills={skills}
       />
     </>
