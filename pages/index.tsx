@@ -1,23 +1,62 @@
+import { FC, useState } from "react";
+import { GetServerSideProps, NextApiResponse } from "next";
 import { Home } from "../src/page-components";
+import { Skills } from "types";
+import { FirstSection, SecondSection, ThirdSection } from "types";
 
-export default function HomePage() {
-  const summaryText = "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ";
-  const start = "My name is";
-  const name = "Terungwa Kombol,";
-  const occupation = "I'm a Software Developer.";
-  const section_two_title = "About Me";
-  const my_details = ["Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-   "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."]
+type Props = {
+  skills: Skills[];
+  data: [FirstSection, SecondSection, ThirdSection] ;
+}
+
+const HomePage:FC<Props> = ({data}) => {
+
+const { start, name, occupation, summary } = data[0];
+const { secondSectionTitle, details } = data[1];
+const { thirdSectionTitle, skills } = data[2];
+
   return (
     <>
       <Home
-      start={start}
-      name={name}
-      occupation= {occupation}
-      summary={summaryText}
-      section_two_title={section_two_title}
-      my_details={my_details}
+        start={start}
+        name={name}
+        occupation= {occupation}
+        summary={summary}
+        secondSectionTitle={secondSectionTitle}
+        myDetails={details}
+        thirdSectionTitle={thirdSectionTitle}
+        skills={skills}
       />
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({
+  req,
+  params,
+  query,
+}) => {
+  try {
+    const protocol = process.env.PROTOCOL || "http";
+    const host = req?.headers.host;
+
+    const firstRes = (await fetch(`${protocol}://${host}/api/first_section`)).json().then(res => res.data);
+    const secondRes = (await fetch(`${protocol}://${host}/api/second_section`)).json().then(res => res.data);
+    const thirdRes = (await fetch(`${protocol}://${host}/api/third_section`)).json().then(res => res.data);
+
+    const promises: [Promise<FirstSection>, Promise<SecondSection>, Promise<ThirdSection>] = [firstRes, secondRes, thirdRes];
+    const result = await Promise.all(promises).then((values)=> values);
+
+    return {
+      props: {
+        data: result,
+      },
+    };
+  } catch (error) {
+   console.error("Oops! Something went wrong..."+ error);
+  }
+};
+
+export default  HomePage;
+
+

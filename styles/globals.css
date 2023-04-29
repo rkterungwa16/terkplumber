@@ -22,7 +22,7 @@ html {
   --grey: #788189;
   --red: #ff6464;
   --light-grey: #797f8b;
-  --lighter-grey: #f6f6f6;
+  --lighter-grey: #dddada;
   --white: #ffffff;
   --milky-white: #fffdf9;
   --dark-green: #3b5856;
@@ -30,6 +30,28 @@ html {
   --dark-grey: #788189;
   --darker-grey: #999999;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 a {
   text-decoration: none;

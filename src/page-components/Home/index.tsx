@@ -1,4 +1,5 @@
 
+import { FC, ReactElement, useState } from "react";
 import Image from "next/image";
 import cx from "classnames";
 
@@ -7,24 +8,28 @@ import { PageMain } from "@components/Page-Main";
 import { PageSection } from "@components/Page-Section";
 import { Button } from "@components/Button";
 import { SmIcons } from "@components/SM-Icons";
+import { FlipCard } from "@components/Flip-card";
+
+import { HorizontalScroller } from "@components/Horizontal-scroller";
 import {
   ButtonColor,
   ButtonVariant,
 } from "@components/Button/constants";
 
-
-
 import styles from "./styles.module.css";
+import { Skills } from "types";
 
 type Props = {
   summary?: string;
   start?: string;
   name?: string;
   occupation?: string;
-  section_two_title?: string;
-  my_details?: string[];
+  secondSectionTitle?: string;
+  thirdSectionTitle?: string;
+  myDetails?: string[];
+  skills?: Skills[];
 }
-export const Home: React.FC<Props> = ({ summary, start, name, occupation, section_two_title, my_details }) => {
+export const Home: FC<Props> = ({ summary, start, name, occupation, secondSectionTitle, thirdSectionTitle, myDetails, skills }) => {
 
   return <Layout>
     <PageMain className="Trk__flex Trk__direction--column ">
@@ -70,11 +75,11 @@ export const Home: React.FC<Props> = ({ summary, start, name, occupation, sectio
 
               <div className="Trk__flex Trk__align--center Trk__align-center--md">
                 <Image src="/hyphen.png" width={39} height={8} alt="hypen" />
-                <span data-testid="title-data">{section_two_title}</span>
+                <span data-testid="title-data">{secondSectionTitle}</span>
               </div>
 
               {
-                my_details?.map((detail, idx) => (
+                myDetails?.map((detail, idx) => (
                   <p data-testid="detail-data" key={idx}>{detail}</p>
                 ))
               }
@@ -95,6 +100,22 @@ export const Home: React.FC<Props> = ({ summary, start, name, occupation, sectio
 
         </div>
 
+      </PageSection>
+
+      <PageSection className={cx(styles.home__skills, "Trk__flex Trk__direction--column Trk__justify--center Trk__align--center")}>
+          <span className={cx(styles.skills__title)} data-testid="third-title-data">{thirdSectionTitle}</span>
+          <div data-testid="skill-data" className={cx(styles.skills__list, "Trk__flex Trk__justify-between--lg Trk__align-center--lg Trk__flex-row--lg Trk__flex-column--md Trk__align-center--md Trk__dnone--sm")}>
+            {
+             skills?.map((item, idx): ReactElement => (
+              <FlipCard key={idx} skill={item} />
+             ))
+            }
+          </div>
+          <div className={cx(styles.skills_list,"Trk__flex Trk__align-center--sm Trk__justify-center--sm Trk__dnone--lg Trk__dnone--md")}>
+            <HorizontalScroller>
+              { skills! }
+            </HorizontalScroller>
+          </div>
       </PageSection>
     </PageMain>
   </Layout>;

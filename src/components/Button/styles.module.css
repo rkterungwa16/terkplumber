@@ -1,6 +1,7 @@
+
 .ButtonSize--xs {
-  min-width: 5.375rem;
-  min-height: 1.5rem;
+  min-width: 3.5em;
+  min-height: 2.5rem;
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1rem;
@@ -80,4 +81,21 @@
   border-width: 1px;
   border-color: transparent;
   border-radius: 50%;
+}
+
+.Button--outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  outline: 0.1rem solid #09a311;
+  border: 0;
+  background-color: white;
+}
+
+.Button--outline:hover {
+  background-color: #09a311;
+  outline: 0;
 }

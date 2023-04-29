@@ -1,6 +1,38 @@
 import { Home } from ".";
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom';
+import { Skills } from "types";
+
+import MockIntersectionObserver from "../../__mock__/mockIntersectionObserver";
+
+window.IntersectionObserver = MockIntersectionObserver;
+
+const skills: Skills[] = [
+  { title:"react js", competences: "UI design & prototyping", icon: "/react_icon.png", iconAlt: "react skill", details:[{
+    "title": "peaq website",
+    "stack": "redux, jotai & tailwind"
+  },
+  {
+    "title": "LLF",
+    "stack": "react-transition-group & strapi"
+  }] },
+  { title:"node", competences: "UI design & prototyping", icon: "/node_icon.png", iconAlt: "node skill", details:[{
+    "title": "peaq website",
+    "stack": "redux, jotai & tailwind"
+  },
+  {
+    "title": "LLF",
+    "stack": "react-transition-group & strapi"
+  }] },
+  { title:"css", competences: "UI design & prototyping", icon: "/css3_icon.png", iconAlt: "css3 skill", details:[{
+    "title": "peaq website",
+    "stack": "redux, jotai & tailwind"
+  },
+  {
+    "title": "LLF",
+    "stack": "react-transition-group & strapi"
+  }] },
+];
 
 describe('Home', () => {
     it('verifies summary props exists ', () => {
@@ -43,5 +75,17 @@ describe('Home', () => {
       render(<Home my_details={['first test detail', 'second test detail']} />)
       const detail = screen.getAllByTestId('detail-data');
       expect(detail).toHaveLength(2);
+    });
+
+    it('verifies section three title props exists ', () => {
+      render(<Home section_three_title={"My Skills"} />)
+      const third_title = screen.getByTestId('third-title-data').textContent;
+      expect(third_title).toEqual("My Skills");
+    });
+
+    it('verifies skills array of length 3 exists ', () => {
+      render(<Home skills={skills} />)
+      const skill = screen.getByTestId('skill-data');
+      expect(skill.children.length).toBe(3);
     })
 })
