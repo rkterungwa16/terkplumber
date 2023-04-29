@@ -1,4 +1,4 @@
-import React, { Children, FC, ReactElement } from "react";
+import React, { FC } from "react";
 import { render } from "@testing-library/react";
 import Image from "next/image";
 

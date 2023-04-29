@@ -1,7 +1,7 @@
 import React, { FC, ReactElement, useRef, createRef, useEffect } from "react";
 import { FlipCard } from "@components/Flip-card";
 import cx from "classnames";
-import { useIntersectionTracker } from "src/hooks/useIntersectionTracker/useIntersectionTracker";
+import { useIntersectionTracker } from "@hooks/useIntersectionTracker/useIntersectionTracker";
 
 import { Skills } from "types";
 
