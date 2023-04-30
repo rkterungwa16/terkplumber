@@ -35,6 +35,7 @@ export const getServerSideProps = async ({ req }: { req: NextApiRequest }) => {
     const protocol = process.env.PROTOCOL || "http";
     const host = req?.headers.host;
 
+    console.log('protocol -->>', protocol, host);
     const firstRes = await fetch(`${protocol}://${host}/api/first_section`)
     const secondRes = await fetch(`${protocol}://${host}/api/second_section`)
     const thirdRes = await fetch(`${protocol}://${host}/api/third_section`)
