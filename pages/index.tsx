@@ -35,30 +35,22 @@ export const getServerSideProps = async ({ req }: { req: NextApiRequest }) => {
     const protocol = process.env.PROTOCOL || "http";
     const host = req?.headers.host;
 
-    const firstRes = (await fetch(`${protocol}://${host}/api/first_section`))
-      .json()
-      .then((res) => res.data);
-    const secondRes = (await fetch(`${protocol}://${host}/api/second_section`))
-      .json()
-      .then((res) => res.data);
-    const thirdRes = (await fetch(`${protocol}://${host}/api/third_section`))
-      .json()
-      .then((res) => res.data);
+    const firstRes = await fetch(`${protocol}://${host}/api/first_section`)
+    const secondRes = await fetch(`${protocol}://${host}/api/second_section`)
+    const thirdRes = await fetch(`${protocol}://${host}/api/third_section`)
 
-    const promises: [
-      Promise<FirstSection>,
-      Promise<SecondSection>,
-      Promise<ThirdSection>
-    ] = [firstRes, secondRes, thirdRes];
-    const result = await Promise.all(promises).then((values) => values);
-
+    const firstSection = await firstRes.json();
+    const secondSection = await secondRes.json();
+    const thirdSection = await thirdRes.json();
+    console.log('first section', firstSection)
     return {
       props: {
-        data: result,
+        data: [ firstSection.data, secondSection.data, thirdSection.data ],
       },
     };
   } catch (error) {
     console.error("Oops! Something went wrong..." + error);
+    throw error;
   }
 };
 
