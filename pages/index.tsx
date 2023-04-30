@@ -42,7 +42,6 @@ export const getServerSideProps = async ({ req }: { req: NextApiRequest }) => {
     const firstSection = await firstRes.json();
     const secondSection = await secondRes.json();
     const thirdSection = await thirdRes.json();
-    console.log('first section', firstSection)
     return {
       props: {
         data: [ firstSection.data, secondSection.data, thirdSection.data ],
