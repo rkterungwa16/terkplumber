@@ -7,8 +7,8 @@
     "tsx"
   ],
   "resetMocks": true,
-  "rootDir": "./src",
-  "testRegex": "/src/.*\\.test\\.tsx?$",
+  "rootDir": "./frontend/src",
+  "testRegex": "/frontend/src/.*\\.test\\.tsx?$",
   "testPathIgnorePatterns": [
     "<rootDir>/node_modules/",
     "<rootDir>/.next/"
