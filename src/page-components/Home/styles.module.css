@@ -20,21 +20,26 @@
 
 .about__me {
   width: 100%;
-  gap: 10%;
 }
 
 
 
 .about__details {
-  gap: 5rem;
+  padding: 5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .about__details {
+    width: 70%;
+  }
 }
 
 .detail__text{
-  gap: 1.25rem;
+  padding: 1.25rem;
 }
 
 .detail__text > div {
-  gap: 0.5rem;
+  padding: 0.5rem;
 }
 
 .detail__text > div >span {
@@ -62,7 +67,7 @@
 }
 .skills__list {
   width: 100%;
-  gap: 1.5rem;
+  padding: 1.5rem;
 }
 
 
@@ -89,7 +94,7 @@
   }
 
   .about__me {
-    gap: 3.125rem;
+    padding: 3.125rem;
   }
 
   .about__me > img {
@@ -100,7 +105,7 @@
   }
 
   .about__details {
-    gap: 1.875rem;
+    padding: 1.875rem;
   }
 
   .detail__text > div > span {
@@ -136,6 +141,6 @@
   }
 
   .about__details {
-    gap: 1.875rem;
+    padding: 1.875rem;
   }
 }

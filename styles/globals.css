@@ -987,7 +987,7 @@ p,
 /*
   Perform this action for screens < 480px (mobile)
 */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
   /*
     Class should not display for mobile screens < 480px
   */
