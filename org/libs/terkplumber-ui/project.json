@@ -1,0 +1,51 @@
+{
+  "name": "terkplumber-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/terkplumber-ui/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/terkplumber-ui",
+        "main": "libs/terkplumber-ui/src/index.ts",
+        "tsConfig": "libs/terkplumber-ui/tsconfig.lib.json",
+        "assets": ["libs/terkplumber-ui/*.md"],
+        "styles": ["libs/terkplumber-ui-styles/src/*.css"],
+        "stylePreprocessorOptions": {
+          "includePaths": [
+            "libs/terkplumber-ui-styles/src/*.css"
+          ]
+        },
+        "extractCss": true
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs terkplumber-ui {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/terkplumber-ui/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/terkplumber-ui/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
