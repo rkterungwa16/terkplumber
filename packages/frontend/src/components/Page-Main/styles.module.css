@@ -1,0 +1,9 @@
+.Page__main {
+  position: relative;
+  height: 100%;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  padding: 0rem 9.375rem;
+}
