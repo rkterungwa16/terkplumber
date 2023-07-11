@@ -2,12 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+ /* border:  1px solid red !important;*/
 }
 
 body {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
+  overflow-y: hidden;
+
 }
 
 html {
@@ -15,11 +18,11 @@ html {
 }
 
 :root {
-  --black: #21243d;
-  --grey: #c5c5c5;
+  --black: #000000;
+  --grey: #788189;
   --red: #ff6464;
   --light-grey: #797f8b;
-  --lighter-grey: #f6f6f6;
+  --lighter-grey: #dddada;
   --white: #ffffff;
   --milky-white: #fffdf9;
   --dark-green: #3b5856;
@@ -27,6 +30,28 @@ html {
   --dark-grey: #788189;
   --darker-grey: #999999;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 a {
   text-decoration: none;
@@ -91,6 +116,11 @@ ul {
 .Trk__right--0 {
   right: 0;
 }
+
+.Trk__right--3 {
+  right: 1rem;
+}
+
 .Trk__border--none {
   border: none;
 }
@@ -300,11 +330,11 @@ p,
   }
 
   .text__body--xlarge {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .text__body--xxlarge {
-    font-size: 4rem;
+    font-size: 5.5rem;
   }
 
   .text__body--xxxlarge {
@@ -352,6 +382,9 @@ p,
 }
 .font__weight--bold {
   font-weight: 700;
+}
+.font__weight--xbold {
+  font-weight: 900;
 }
 
 .Trk__LineHeight--0 {
@@ -408,6 +441,10 @@ p,
 
 .Trk__height--max {
   height: 100%;
+}
+
+.Trk__width--md {
+  width: 50%;
 }
 
 .Trk__width--min {
@@ -954,6 +991,10 @@ p,
   /*
     Class should not display for mobile screens < 480px
   */
+  .text__body-mlarge--sm {
+    font-size: 2.2rem;
+  }
+
   .Trk__dnone--sm {
     display: none;
   }
@@ -998,6 +1039,10 @@ p,
 
   .Trk__grow-1--sm {
     flex-grow: 1;
+  }
+
+  .Trk__flex-row--sm {
+    flex-direction: row;
   }
 
   .Trk__flex-column--sm {
@@ -1051,6 +1096,8 @@ p,
   .Trk__flex-wrap--sm {
     flex-wrap: wrap;
   }
+
+
 }
 /*
   Perform this action for screens > 480px (tablets)
@@ -1065,6 +1112,10 @@ p,
   /*
     Class should display flex for tablet > 480px
   */
+  .Trk__dblock--md {
+    display: block;
+  }
+
   .Trk__dflex--md {
     display: flex;
   }
@@ -1103,6 +1154,10 @@ p,
 
   .Trk__grow-1--md {
     flex-grow: 1;
+  }
+
+  .Trk__flex-row--md {
+    flex-direction: row;
   }
 
   .Trk__flex-column--md {
@@ -1161,7 +1216,7 @@ p,
 /*
   Perform this action for screens > 768px (small/large screens)
 */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 839px) {
   /*
     Class should not display for tablet screens > 786px
   */
@@ -1210,6 +1265,10 @@ p,
 
   .Trk__grow-1--lg {
     flex-grow: 1;
+  }
+
+  .Trk__flex-row--lg {
+    flex-direction: row;
   }
 
   .Trk__flex-column--lg {
