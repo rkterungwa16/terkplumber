@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { Header, Nav, NavList, NavListItem } from "@components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { usePathname } from 'next/navigation';
 import cx from "classnames";
 import { Bars3Icon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
 
 import styles from "./styles.module.css";
 
@@ -14,21 +18,31 @@ import { ButtonColor, ButtonVariant } from "@components/Button/constants";
 import { IconButton } from "@components/Button/icon";
 
 export const PageHeader = () => {
-  const router = useRouter();
-  const pathname = router?.pathname;
+
+  const pathname = usePathname();
+  const [menuIsActive, setMenu] = useState(false);
+  const handleClick = () => {
+    setMenu(!menuIsActive)
+  }
   return (
-    <Header className={cx(styles.Page__header, "bg-milky-white")}>
-      <Nav className="Trk__dnone--md Trk__absolute--sm Trk__left--3">
+    <Header className={cx(styles.Page__header, "bg-milky-white ")}>
+      <Nav className="Trk__dnone--md Trk__absolute--sm Trk__left--3" onClick={handleClick}>
         <IconButton>
-          <Bars3Icon />
+          {
+            menuIsActive === false
+            ?
+            ( <Bars3Icon /> )
+            :
+            ( < XMarkIcon /> )
+          }
         </IconButton>
       </Nav>
-      <Nav className="Trk__dflex--sm Trk__justify-center--sm Trk__width-max--sm">
+      <Nav className="Trk__dflex--sm Trk__justify-center--sm Trk__width-max--sm ">
         <CustomLink component={Link} href={ClientRoutes.home}>
           <Image width={117} height={42} src="/logo.png" alt="Logo" />
         </CustomLink>
       </Nav>
-      <Nav className="Trk__dnone--sm">
+      <Nav className="Trk__dnone--sm ">
         <NavList>
           {Object.values(HeaderNavs).map((nav, index) => {
             const isActive = ClientRoutes[nav] === pathname;
@@ -49,14 +63,20 @@ export const PageHeader = () => {
           })}
         </NavList>
       </Nav>
-      <Nav className="Trk__dnone--sm">
+      <Nav className="Trk__dnone--sm ">
         <Button
+        data-testid="thebtn"
           href={ClientRoutes.contact}
           color={ButtonColor.PRIMARY}
           variant={ButtonVariant.STANDARD}
         >
           Let’s Talk
         </Button>
+      </Nav>
+      <Nav className="Trk__dnone--md Trk__absolute--sm Trk__right--3">
+        <IconButton href={ClientRoutes.contact}>
+          <ChatBubbleLeftIcon />
+        </IconButton>
       </Nav>
     </Header>
   );

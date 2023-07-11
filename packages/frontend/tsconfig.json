@@ -19,9 +19,11 @@
       "@components/*": ["./src/components/*"],
       "@page-components/*": ["./src/page-components/*"],
       "@routes/*": ["./src/routes/*"],
-      "@styles/*": ["./styles/*"]
+      "@styles/*": ["./styles/*"],
+      "@hooks/*": ["./src/hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
+
