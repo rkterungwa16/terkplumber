@@ -1,0 +1,6 @@
+
+[phases.build]
+cmds = ['npm run build:frontend']
+
+[start]
+cmd = 'npm run start:frontend'

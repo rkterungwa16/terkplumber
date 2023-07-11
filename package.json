@@ -13,6 +13,7 @@
     "build": "npx lerna run build --stream",
     "setup": "npm install",
     "start": "npx lerna run start --parallel",
-    "start:frontend": "npx lerna run start --scope=@terkplumber/frontend"
+    "start:frontend": "npx lerna run start --scope=@terkplumber/frontend",
+    "build:frontend": "npx lerna run build --scope=@terkplumber/frontend"
   }
 }
