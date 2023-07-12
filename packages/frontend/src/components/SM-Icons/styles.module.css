@@ -1,0 +1,47 @@
+.sm__handles {
+  bottom: 60%;
+  right: 2.1875rem;
+  width: 2%;
+  height: 3.4375rem;
+  background-color: #FFFDF9;
+  z-index: 1;
+}
+
+.sm__handles ul {
+  gap: 1.875rem;
+}
+
+/*
+  Perform this action for screens < 480px (mobile)
+*/
+@media only screen and (max-width: 480px) {
+
+  .sm__handles {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3.4375rem;
+  }
+
+  .sm__handles ul {
+    width: 100%;
+
+  }
+
+}
+
+/*
+  Perform this action for screens > 480px & < 768px (tablet & desktop)
+*/
+@media only screen and (min-width: 480px) and (max-width: 839px) {
+  .sm__handles {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3.4375rem;
+  }
+
+  .sm__handles ul {
+    width: 100%;
+  }
+}
