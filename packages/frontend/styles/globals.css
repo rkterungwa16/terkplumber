@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
- /* border:  1px solid red !important;*/
+  /* border:  1px solid red !important;*/
 }
 
 body {
@@ -10,7 +10,6 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   overflow-y: hidden;
-
 }
 
 html {
@@ -36,7 +35,6 @@ html {
   width: 5px;
 }
 
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -51,7 +49,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
 
 a {
   text-decoration: none;
@@ -984,6 +981,22 @@ p,
   large screen >1025px (xlg)
 */
 
+@media only screen and (max-width: 320px) {
+  h1,
+  .h1 {
+    font-size: 2rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.5rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1rem;
+  }
+}
 /*
   Perform this action for screens < 480px (mobile)
 */
@@ -1096,8 +1109,9 @@ p,
   .Trk__flex-wrap--sm {
     flex-wrap: wrap;
   }
+}
 
-
+@media only screen and (min-width: 320px) {
 }
 /*
   Perform this action for screens > 480px (tablets)

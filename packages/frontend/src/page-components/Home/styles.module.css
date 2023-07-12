@@ -1,11 +1,11 @@
 .first__intro p span {
   text-transform: capitalize;
 }
-.first__underline {
+.HomePage__line-brush {
   width: 85%;
 }
 
-.first__underline img {
+.HomePage__line-brush img {
   width: 100%;
   object-fit: contain;
   object-position: 80% 20%;
@@ -19,7 +19,7 @@
   word-spacing: normal;
   line-height: 1.3rem;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .HomePage__about-me {
     width: 100%;
     max-width: 100%;
@@ -88,7 +88,7 @@
     font-size: 2rem;
   }
 
-  .first__underline img {
+  .HomePage__line-brush img {
     width: 75%;
 
   }
@@ -134,7 +134,7 @@
 */
 @media only screen and (min-width: 480px) and (max-width: 839px) {
 
-  .first__underline {
+  .HomePage__line-brush {
     width: 75%;
   }
 
