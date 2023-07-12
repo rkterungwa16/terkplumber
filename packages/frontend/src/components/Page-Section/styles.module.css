@@ -4,6 +4,7 @@
   width: 100%;
 
   padding-bottom: 5rem;
+  padding-top: 1.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -12,5 +13,6 @@
   .Page__section {
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-top: 4.5rem;
   }
 }

@@ -56,7 +56,7 @@ export const Home: FC<Props> = ({
           </div>
           <div
             className={cx(
-              styles.first__underline,
+              styles['HomePage__line-brush'],
               "Trk__flex Trk__align-start--sm"
             )}
           >

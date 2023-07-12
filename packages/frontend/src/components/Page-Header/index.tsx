@@ -2,12 +2,8 @@ import { useState } from "react";
 import { Header, Nav, NavList, NavListItem } from "@components/Header";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
 import cx from "classnames";
-import { Bars3Icon } from "@heroicons/react/24/outline";
-import { XMarkIcon } from "@heroicons/react/24/outline";
-import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
 
 import styles from "./styles.module.css";
 
@@ -24,14 +20,19 @@ export const PageHeader = () => {
     setMenu(!menuIsActive);
   };
   return (
-    <div className={cx(styles["Page__header--wrapper"], "bg-milky-white")}>
-      <Header className={cx(styles.Page__header)}>
+    <div className={cx(styles["Page__header--wrapper"])}>
+      <Header className={cx(styles.Page__header, "bg-milky-white ")}>
         <Nav
           className="Trk__dnone--md Trk__absolute--sm Trk__left--3"
           onClick={handleClick}
         >
           <IconButton>
-            {menuIsActive === false ? <Bars3Icon /> : <XMarkIcon />}
+            <Image
+              width={28}
+              height={28}
+              src="/hamburger-menu.svg"
+              alt="Menu"
+            />
           </IconButton>
         </Nav>
         <Nav className="Trk__dflex--sm Trk__justify-center--sm Trk__width-max--sm ">
@@ -72,7 +73,12 @@ export const PageHeader = () => {
         </Nav>
         <Nav className="Trk__dnone--md Trk__absolute--sm Trk__right--3">
           <IconButton href={ClientRoutes.contact}>
-            <ChatBubbleLeftIcon />
+            <Image
+              width={28}
+              height={28}
+              src="/chat-bubble.svg"
+              alt="ChatBubble"
+            />
           </IconButton>
         </Nav>
       </Header>

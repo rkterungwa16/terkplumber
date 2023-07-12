@@ -13,13 +13,13 @@ export const SmIcons: FC = () => {
       <div
         className={cx(
           styles["Socials__wrapper--mobile"],
-          "Trk__fixed Trk__flex Trk__align-center--lg Trk__align-center--md Trk__align-center--sm"
+          "Trk__fixed"
         )}
       >
         <ul
           className={cx(
             styles.Socials__ul,
-            "Trk__flex Trk__flex-column--lg Trk__flex-row--md Trk__justify-evenly--md Trk__flex-row--sm Trk__justify-around--sm"
+            "Trk__flex"
           )}
         >
           <li>
