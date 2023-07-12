@@ -1,9 +1,21 @@
+.Page__header--wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .Page__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4.3rem;
-  padding: 0rem 6.5rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .Page__header {
+    width: 1024px;
+  }
 }
 
 .Page__nav--active {

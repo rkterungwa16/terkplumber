@@ -4,5 +4,13 @@
   width: 100%;
 
   padding-bottom: 5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .Page__section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
