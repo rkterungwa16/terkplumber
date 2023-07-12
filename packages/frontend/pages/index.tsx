@@ -35,17 +35,18 @@ export const getServerSideProps = async ({ req }: { req: NextApiRequest }) => {
     const protocol = process.env.PROTOCOL || "http";
     const host = req?.headers.host;
 
-    console.log('protocol -->>', protocol, host);
-    const firstRes = await fetch(`${protocol}://${host}/api/first_section`)
-    const secondRes = await fetch(`${protocol}://${host}/api/second_section`)
-    const thirdRes = await fetch(`${protocol}://${host}/api/third_section`)
+    const [firstRes, secondRes, thirdRes] = await Promise.all([
+      fetch(`${protocol}://${host}/api/first_section`),
+      fetch(`${protocol}://${host}/api/second_section`),
+      fetch(`${protocol}://${host}/api/third_section`),
+    ]);
 
     const firstSection = await firstRes.json();
     const secondSection = await secondRes.json();
     const thirdSection = await thirdRes.json();
     return {
       props: {
-        data: [ firstSection.data, secondSection.data, thirdSection.data ],
+        data: [firstSection.data, secondSection.data, thirdSection.data],
       },
     };
   } catch (error) {
