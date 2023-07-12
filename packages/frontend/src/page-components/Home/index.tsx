@@ -27,10 +27,6 @@ export const Home: FC<Props> = ({
   start,
   name,
   occupation,
-  secondSectionTitle,
-  thirdSectionTitle,
-  myDetails,
-  skills,
 }) => {
   return (
     <Layout>
