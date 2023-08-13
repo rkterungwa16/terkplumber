@@ -33,7 +33,7 @@ export const Home: FC<Props> = ({
       <PageMain className="Trk__relative">
         <SmIcons />
         <PageSection className="Trk__flex Trk__direction--column Trk__pt--10">
-          <div className={cx(styles.first__intro, "font__weight--xbold")}>
+          <div className={cx(styles.FirstSection__intro, "font__weight--xbold")}>
             <h2
               className="black Trk__capitalize font__weight--xbold"
               data-testid="start-data"
@@ -71,13 +71,13 @@ export const Home: FC<Props> = ({
           <div
             className={cx(
               styles['HomePage__about-me'],
-              "Trk__flex Trk__mt--4 Trk__mb--4 Trk__width--md grey font__weight--bold Trk__LineHeight--2"
+              "Trk__flex Trk__mt--2 Trk__mb--4 Trk__width--md grey font__weight--small Trk__LineHeight--2"
             )}
           >
             <p data-testid="sum-data">{summary}</p>
           </div>
 
-          <div className={styles.get__resume}>
+          <div>
             <Button
               color={ButtonColor.PRIMARY}
               variant={ButtonVariant.STANDARD}
