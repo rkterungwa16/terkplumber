@@ -1,157 +1,118 @@
-.FirstSection__intro p span {
-  text-transform: capitalize;
-}
-.HomePage__line-brush {
-  width: 85%;
+.HomePage__first-intro span {
+  font-size: 7.7vw;
 }
 
 .HomePage__line-brush img {
-  width: 100%;
   object-fit: contain;
   object-position: 80% 20%;
 }
 
-.HomePage__introduction {
-  max-width: 30.625rem;
-  min-width: 20.625rem;
-  font-size: 1.5rem;
-  word-spacing: normal;
-  line-height: 1.3rem;
+.HomePage__line-brush img {
+  width: 55%;
+}
+
+.HomePage__get-resume {
+  align-self: center;
 }
 
 .HomePage__about-me {
-  max-width: 30.625rem;
-  min-width: 20.625rem;
-  font-size: 1.125rem;
-  word-spacing: normal;
-  line-height: 1.3rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
-@media only screen and (max-width: 768px) {
+
+.HomePage__second-section--title{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.HomePage__second-section--works{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .HomePage__second-section--works {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+
+  .HomePage__first-intro span {
+    font-size: 4vw;
+  }
+  .HomePage__line-brush img{
+    width: 75%;
+  }
+
+  .HomePage__get-resume {
+    align-self:flex-start;
+  }
+
+  .HomePage__about-me {
+    max-width: 30.625rem;
+    min-width: 20.625rem;
+    font-size: 1.125rem;
+    word-spacing: normal;
+    line-height: 1.3rem;
+  }
+
+  .HomePage__about-me p {
+    font-size: 1rem;
+  }
+
+  .HomePage__second-section--title{
+    font-size: 2.2rem;
+  }
+
+  .HomePage__second-section--works{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* @media only screen and (max-width: 768px) {
   .HomePage__about-me {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
   }
-}
-
-.about__me {
-  width: 100%;
-  gap: 10%;
-}
-
-
-
-.about__details {
-  gap: 5rem;
-}
-
-.detail__text{
-  gap: 1.25rem;
-}
-
-.detail__text > div {
-  gap: 0.5rem;
-}
-
-.detail__text > div >span {
-  color: var(--light-brown);
-  font-size: 2.5rem;
-  font-weight: 900;
-  text-transform: capitalize;
-}
-
-.detail__text p{
-  font-weight: 400;
-  font-size: 1.3125rem;
-  line-height: 1.625rem;
-}
-
-.home__skills {
-  margin: 1rem 0;
-}
-.skills__title{
-  color: var(--light-brown);
-  font-weight: 900;
-  font-size: 2.4375rem;
-  text-transform: capitalize;
-  padding-bottom: 2rem;
-}
-.skills__list {
-  width: 100%;
-  gap: 1.5rem;
-}
+} */
 
 
 /*
   Perform this action for screens < 480px (mobile)
 */
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
 
-  .FirstSection__intro p {
-    min-width: 21.875rem;
-  }
-
-  .FirstSection__intro p span {
+  .HomePage__first-intro span {
     font-size: 2rem;
   }
 
   .HomePage__line-brush img {
     width: 75%;
-
   }
 
-  .first__summary {
-    font-size: 1rem;
+  .HomePage__get-resume {
+    align-self: center;
   }
 
-  .about__me {
-    gap: 3.125rem;
-  }
 
-  .about__me > img {
-    height: 15rem;
-    width: 13rem;
-    border-radius: 15%;
-    border: 2px solid var(--light-brown);
-  }
 
-  .about__details {
-    gap: 1.875rem;
-  }
-
-  .detail__text > div > span {
-    font-size: 1.8125rem;
-  }
-
-  .detail__text p{
-    min-width: 18.75rem;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.125rem;
-  }
-
-  .skills__title {
-    font-size: 1.8125rem;
-  }
-
-}
+} */
 
 /*
   Perform this action for screens >= 480px (tablet)
 */
-@media only screen and (min-width: 480px) and (max-width: 839px) {
+/* @media only screen and (min-width: 480px) and (max-width: 1024px) {
 
   .HomePage__line-brush {
     width: 75%;
   }
 
-  .about__me > img {
-    height: 23rem;
-    width: 21rem;
-
+  .HomePage__get-resume {
+    align-self: center;
   }
-
-  .about__details {
-    gap: 1.875rem;
-  }
-}
+} */

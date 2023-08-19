@@ -1,18 +1,18 @@
-.Page__section {
+.Page__section{
   position: relative;
   min-height: 100%;
   width: 100%;
 
-  padding-bottom: 5rem;
-  padding-top: 1.5rem;
+  padding-bottom: 10rem;
+  padding-top: 2rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .Page__section {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4.5rem;
+    padding-right: 4rem;
     padding-top: 4.5rem;
   }
 }
