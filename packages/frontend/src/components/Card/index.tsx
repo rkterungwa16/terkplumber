@@ -4,7 +4,6 @@ import cn from "classnames";
 import Image from "next/image";
 
 import styles from "./styles.module.css";
-import { url } from "inspector";
 
 type CardProps = {
   work: Works;
@@ -20,10 +19,10 @@ const Card:FC<CardProps> = ({work}) => {
         backgroundImage:`url(${icon})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          width: "5rem",
-          height: "5rem",
-          borderRadius:"10%"
+        backgroundRepeat: "no-repeat",
+        width: "5rem",
+        height: "5rem",
+        borderRadius:"18%"
       }}>
 
       </div>
@@ -48,7 +47,10 @@ const Card:FC<CardProps> = ({work}) => {
         ))}
       </span>
 
-      <p data-testid="cardSum-data">{summary}</p>
+      <p
+        data-testid="cardSum-data">
+        {summary}
+      </p>
     </div>
   )
 };
