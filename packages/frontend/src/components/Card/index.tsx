@@ -12,27 +12,15 @@ type CardProps = {
 const Card:FC<CardProps> = ({work}) => {
   const { icon, title, stack, summary } = work;
   return(
-    <div className={cn(styles["card__container"],
+    <div className={cn(styles["Card__container"],
     "Trk__flex Trk__direction--column")}>
-      <div className={styles["card__logo"]}
+
+      <div className={styles["Card__logo"]}
       style={{
-        backgroundImage:`url(${icon})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "5rem",
-        height: "5rem",
-        borderRadius:"18%"
+        backgroundImage:`url(${icon})`
       }}>
 
       </div>
-      {/* <Image
-        src={icon}
-        alt={title}
-        width={50}
-        height={50}
-      /> */}
-
       <span
       className="black font__weight--xbold"
       data-testid="cardTitle-data">

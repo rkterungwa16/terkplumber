@@ -1,4 +1,4 @@
-.card__container{
+.Card__container{
   border: 1px solid var(--lighter-grey);
   width: 100%;
   height: auto;
@@ -7,7 +7,14 @@
 
 }
 
-
+.Card__logo {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 18%;
+}
 
 
 /* @media only screen and (min-width: 1024px){
