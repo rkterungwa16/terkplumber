@@ -1,11 +1,14 @@
 .Page__main {
+  align-self: center;
+  justify-self: center;
   height: 100vh;
-  width: 100%;
+  width: 95vw;
   min-height: 100vh;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .Page__main {
-    width: 1024px;
+    width: 83vw;
+    /* width: 1150px; */
   }
 }
