@@ -1,17 +1,15 @@
 export type ThirdSection = {
   thirdSectionTitle: string;
-  skills: Skills[];
+  posts: Posts[];
 }
 
-export type Skills = {
+export type Posts = {
+  id: number;
   title: string;
-  competences: string;
-  icon: string;
-  iconAlt: string;
-  details: Details[];
-}
-
-export type Details = {
-  title: string;
-  stack: string;
+  category: string;
+  date: string;
+  text: string;
+  image: string;
+  author: string;
+  avatar: string;
 }

@@ -1,61 +1,95 @@
 {
-  "thirdSectionTitle": "my skills",
-  "skills": [{
-      "title": "react js",
-      "competences": "UI Design, Prototyping",
-      "icon": "/react-icon.png",
-      "iconAlt": "React skill",
-      "details": [{
-          "title": "peaq website",
-          "stack": "redux, jotai & tailwind"
-        },
-        {
-          "title": "LLF",
-          "stack": "react-transition-group & strapi"
-        },
-        {
-          "title": "peaq website",
-          "stack": "redux, jotai & tailwind"
-        }
-      ]
+  "thirdSectionTitle": "latest blog posts",
+  "posts": [
+    {
+      "1d": 1,
+      "title": "UX review presentations",
+      "category": "Design",
+      "date": "21 Jan 2023",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non euismod arcu. Nullam at nibh vulputate, scelerisque libero ut, dignissim est. Aenean porttitor pellentesque odio, at mollis lacus posuere non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mauris tellus, vulputate id eros eget, elementum aliquam sapien. Mauris eleifend est sem, ac iaculis nulla pharetra eu. Ut eros augue, maximus facilisis molestie at, pharetra vitae turpis. Phasellus venenatis id velit eget commodo.",
+      "image":"/blog-image.png",
+      "author": "richard kombol",
+      "avatar":"/avatar.png"
     },
     {
-      "title": "node",
-      "competences": "UI Design, Prototyping",
-      "icon": "/node-icon.png",
-      "iconAlt": "Nodejs skill",
-      "details": [{
-          "title": "peaq website",
-          "stack": "redux, jotai & tailwind"
-        },
-        {
-          "title": "LLF",
-          "stack": "react-transition-group & strapi"
-        },
-        {
-          "title": "peaq website",
-          "stack": "redux, jotai & tailwind"
-        }
-      ]
+      "id": 2,
+      "title": "UX review presentations",
+      "category": "Design",
+      "date": "20 Jan 2022",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non euismod arcu. Nullam at nibh vulputate, scelerisque libero ut, dignissim est. Aenean porttitor pellentesque odio, at mollis lacus posuere non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mauris tellus, vulputate id eros eget, elementum aliquam sapien. Mauris eleifend est sem, ac iaculis nulla pharetra eu. Ut eros augue, maximus facilisis molestie at, pharetra vitae turpis. Phasellus venenatis id velit eget commodo.",
+      "image":"/blog-image.png",
+      "author": "richard kombol",
+      "avatar":"/avatar.png"
     },
     {
-      "title": "css",
-      "competences": "UI Design, Prototyping",
-      "icon": "/css3-icon.png",
-      "iconAlt": "CSS3 skill",
-      "details": [{
-          "title": "peaq website",
-          "stack": "redux, jotai & tailwind"
-        },
-        {
-          "title": "LLF",
-          "stack": "react-transition-group & strapi"
-        },
-        {
-          "title": "peaq website",
-          "stack": "redux, jotai & tailwind"
-        }
-      ]
+      "id": 3,
+      "title": "UX review presentations",
+      "category": "Design",
+      "date": "20 Jan 2022",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non euismod arcu. Nullam at nibh vulputate, scelerisque libero ut, dignissim est. Aenean porttitor pellentesque odio, at mollis lacus posuere non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mauris tellus, vulputate id eros eget, elementum aliquam sapien. Mauris eleifend est sem, ac iaculis nulla pharetra eu. Ut eros augue, maximus facilisis molestie at, pharetra vitae turpis. Phasellus venenatis id velit eget commodo.",
+      "image":"/blog-image.png",
+      "author": "richard kombol",
+      "avatar":"/avatar.png"
+    },
+    {
+      "id": 4,
+      "title": "UX review presentations",
+      "category": "Design",
+      "date": "20 Jan 2022",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non euismod arcu. Nullam at nibh vulputate, scelerisque libero ut, dignissim est. Aenean porttitor pellentesque odio, at mollis lacus posuere non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mauris tellus, vulputate id eros eget, elementum aliquam sapien. Mauris eleifend est sem, ac iaculis nulla pharetra eu. Ut eros augue, maximus facilisis molestie at, pharetra vitae turpis. Phasellus venenatis id velit eget commodo.",
+      "image":"/blog-image.png",
+      "author": "richard kombol",
+      "avatar":"/avatar.png"
+    },
+    {
+      "id": 5,
+      "title": "UX review presentations",
+      "category": "Design",
+      "date": "20 Jan 2022",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non euismod arcu. Nullam at nibh vulputate, scelerisque libero ut, dignissim est. Aenean porttitor pellentesque odio, at mollis lacus posuere non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mauris tellus, vulputate id eros eget, elementum aliquam sapien. Mauris eleifend est sem, ac iaculis nulla pharetra eu. Ut eros augue, maximus facilisis molestie at, pharetra vitae turpis. Phasellus venenatis id velit eget commodo.",
+      "image":"/blog-image.png",
+      "author": "richard kombol",
+      "avatar":"/avatar.png"
+    },
+    {
+      "id": 6,
+      "title": "UX review presentations",
+      "category": "Design",
+      "date": "20 Jan 2022",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non euismod arcu. Nullam at nibh vulputate, scelerisque libero ut, dignissim est. Aenean porttitor pellentesque odio, at mollis lacus posuere non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mauris tellus, vulputate id eros eget, elementum aliquam sapien. Mauris eleifend est sem, ac iaculis nulla pharetra eu. Ut eros augue, maximus facilisis molestie at, pharetra vitae turpis. Phasellus venenatis id velit eget commodo.",
+      "image":"/blog-image.png",
+      "author": "richard kombol",
+      "avatar":"/avatar.png"
+    },
+    {
+      "id": 7,
+      "title": "UX review presentations",
+      "category": "Design",
+      "date": "20 Jan 2022",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non euismod arcu. Nullam at nibh vulputate, scelerisque libero ut, dignissim est. Aenean porttitor pellentesque odio, at mollis lacus posuere non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mauris tellus, vulputate id eros eget, elementum aliquam sapien. Mauris eleifend est sem, ac iaculis nulla pharetra eu. Ut eros augue, maximus facilisis molestie at, pharetra vitae turpis. Phasellus venenatis id velit eget commodo.",
+      "image":"/blog-image.png",
+      "author": "richard kombol",
+      "avatar":"/avatar.png"
+    },
+    {
+      "id": 8,
+      "title": "UX review presentations",
+      "category": "Design",
+      "date": "20 Jan 2022",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non euismod arcu. Nullam at nibh vulputate, scelerisque libero ut, dignissim est. Aenean porttitor pellentesque odio, at mollis lacus posuere non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mauris tellus, vulputate id eros eget, elementum aliquam sapien. Mauris eleifend est sem, ac iaculis nulla pharetra eu. Ut eros augue, maximus facilisis molestie at, pharetra vitae turpis. Phasellus venenatis id velit eget commodo.",
+      "image":"/blog-image.png",
+      "author": "richard kombol",
+      "avatar":"/avatar.png"
+    },
+    {
+      "id": 9,
+      "title": "UX review presentations",
+      "category": "Design",
+      "date": "20 Jan 2022",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non euismod arcu. Nullam at nibh vulputate, scelerisque libero ut, dignissim est. Aenean porttitor pellentesque odio, at mollis lacus posuere non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mauris tellus, vulputate id eros eget, elementum aliquam sapien. Mauris eleifend est sem, ac iaculis nulla pharetra eu. Ut eros augue, maximus facilisis molestie at, pharetra vitae turpis. Phasellus venenatis id velit eget commodo.",
+      "image":"/blog-image.png",
+      "author": "richard kombol",
+      "avatar":"/avatar.png"
     }
   ]
 }

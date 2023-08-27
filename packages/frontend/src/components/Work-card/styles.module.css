@@ -1,13 +1,12 @@
-.Card__container{
+.WorkCard__container{
   border: 1px solid var(--lighter-grey);
   width: 100%;
   height: auto;
   padding: 1rem 1rem;
   background-color: var(--white);
-
 }
 
-.Card__logo {
+.WorkCard__logo {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,7 +16,7 @@
   margin-bottom: 1rem;
 }
 
-.Card__container p {
+.WorkCard__container p {
   font-size: 0.875rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
