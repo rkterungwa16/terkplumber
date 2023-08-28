@@ -38,8 +38,7 @@ export const Home: FC<Props> = ({
   thirdSectionTitle,
   posts,
   invite,
-  prompt,
-  invitation
+  prompt
 }) => {
 
   return (
