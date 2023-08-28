@@ -1,17 +1,18 @@
 import { FC } from "react";
 import { NextApiRequest } from "next";
 import { Home } from "../src/page-components";
-import { Skills } from "types";
+import { Skills, Works } from "types";
 import { FirstSection, SecondSection, ThirdSection } from "types";
 
 type Props = {
+  works: Works[];
   skills: Skills[];
   data: [FirstSection, SecondSection, ThirdSection];
 };
 
 const HomePage: FC<Props> = ({ data }) => {
   const { start, name, occupation, summary } = data[0];
-  const { secondSectionTitle, details } = data[1];
+  const { secondSectionTitle, works } = data[1];
   const { thirdSectionTitle, skills } = data[2];
 
   return (
@@ -22,7 +23,7 @@ const HomePage: FC<Props> = ({ data }) => {
         occupation={occupation}
         summary={summary}
         secondSectionTitle={secondSectionTitle}
-        myDetails={details}
+        works={works}
         thirdSectionTitle={thirdSectionTitle}
         skills={skills}
       />

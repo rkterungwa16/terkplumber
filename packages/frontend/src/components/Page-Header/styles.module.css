@@ -1,21 +1,9 @@
-.Page__header--wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 .Page__header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 4.3rem;
   width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  .Page__header {
-    width: 1024px;
-  }
 }
 
 .Page__nav--active {
@@ -36,21 +24,3 @@
   color: #60BB46;
 }
 
-/*
-  Perform this action for screens < 480px (mobile)
-*/
-@media only screen and (max-width: 480px) {
-
-
-}
-
-/*
-  Perform this action for screens > 480px & < 768px (tablet & desktop)
-*/
-@media only screen and (min-width: 480px) and (max-width: 839px) {
-
-  .Page__header {
-    padding: 0rem 3.5rem;
-  }
-
-}

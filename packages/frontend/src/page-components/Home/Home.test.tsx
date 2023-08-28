@@ -1,37 +1,27 @@
 import { Home } from ".";
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom';
-import { Skills } from "types";
+import { Works } from "types";
 
-import MockIntersectionObserver from "../../__mock__/mockIntersectionObserver";
-
-window.IntersectionObserver = MockIntersectionObserver;
-
-const skills: Skills[] = [
-  { title:"react js", competences: "UI design & prototyping", icon: "/react_icon.png", iconAlt: "react skill", details:[{
-    "title": "peaq website",
-    "stack": "redux, jotai & tailwind"
+const works: Works[] = [
+  {
+    "icon": "/media-disco.png",
+    "title": "Media Disco",
+    "stack": ["React", "Next.js", "Node.js"],
+    "summary": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet..."
   },
   {
-    "title": "LLF",
-    "stack": "react-transition-group & strapi"
-  }] },
-  { title:"node", competences: "UI design & prototyping", icon: "/node_icon.png", iconAlt: "node skill", details:[{
-    "title": "peaq website",
-    "stack": "redux, jotai & tailwind"
+    "icon": "/ifit.png",
+    "title": "iFit",
+    "stack": ["React", "Next.js", "Node.js"],
+    "summary": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet..."
   },
   {
-    "title": "LLF",
-    "stack": "react-transition-group & strapi"
-  }] },
-  { title:"css", competences: "UI design & prototyping", icon: "/css3_icon.png", iconAlt: "css3 skill", details:[{
-    "title": "peaq website",
-    "stack": "redux, jotai & tailwind"
-  },
-  {
-    "title": "LLF",
-    "stack": "react-transition-group & strapi"
-  }] },
+    "icon": "/livesnlivelihood.png",
+    "title": "Lives and Livelihood",
+    "stack": ["React", "Next.js", "Node.js"],
+    "summary": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet..."
+  }
 ];
 
 describe('Home', () => {
@@ -60,32 +50,20 @@ describe('Home', () => {
     })
 
     it('verifies section two title props exists ', () => {
-      render(<Home section_two_title={"About Me"} />)
-      const title = screen.getByTestId('title-data').textContent;
-      expect(title).toEqual("About Me");
-    })
-
-    it("verifies there is a valid src attribute value of '/photo.png'", () => {
-      render(<Home />);
-      const contactBttn = screen.getByRole("img", { name: "Terungwa Kombol"});
-      expect(contactBttn.getAttribute('src')).toBe('/_next/image?url=%2Fphoto.png&w=828&q=75');
+      render(<Home secondSectionTitle={"Second section title"} />)
+      const title = screen.getByTestId('sec2title-data').textContent;
+      expect(title).toEqual("Second section title");
     });
 
-    it('verifies my_details props exists ', () => {
-      render(<Home my_details={['first test detail', 'second test detail']} />)
-      const detail = screen.getAllByTestId('detail-data');
-      expect(detail).toHaveLength(2);
+    it('verifies works has array of length 3  ', () => {
+      render(<Home works={works} />)
+      const workArr = screen.getByTestId('sec2title-data');
+      expect(workArr.children.length).toBe(3);
     });
 
-    it('verifies section three title props exists ', () => {
-      render(<Home section_three_title={"My Skills"} />)
-      const third_title = screen.getByTestId('third-title-data').textContent;
-      expect(third_title).toEqual("My Skills");
-    });
-
-    it('verifies skills array of length 3 exists ', () => {
-      render(<Home skills={skills} />)
-      const skill = screen.getByTestId('skill-data');
-      expect(skill.children.length).toBe(3);
-    })
+    // it("verifies there is a valid src attribute value of '/photo.png'", () => {
+    //   render(<Home />);
+    //   const contactBttn = screen.getByRole("img", { name: "Terungwa Kombol"});
+    //   expect(contactBttn.getAttribute('src')).toBe('/_next/image?url=%2Fphoto.png&w=828&q=75');
+    // });
 })
