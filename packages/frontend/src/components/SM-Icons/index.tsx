@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 
 export const SmIcons: FC = () => {
   return (
-    <div className={cx(styles["Socials__wrapper--desktop"], "Trk__absolute")}>
+    <div className={cx(styles["Socials__wrapper--desktop"], "Trk__absolute ")}>
       <div
         className={cx(
           styles["Socials__wrapper--mobile"],

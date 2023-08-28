@@ -1,18 +1,26 @@
 import { FC } from "react";
 import { NextApiRequest } from "next";
 import { Home } from "../src/page-components";
-import { Skills } from "types";
-import { FirstSection, SecondSection, ThirdSection } from "types";
+import {
+  Posts,
+  Works,
+  FirstSection,
+  SecondSection,
+  ThirdSection,
+  FourthSection
+} from "types";
 
 type Props = {
-  skills: Skills[];
-  data: [FirstSection, SecondSection, ThirdSection];
+  works: Works[];
+  posts: Posts[];
+  data: [FirstSection, SecondSection, ThirdSection, FourthSection];
 };
 
 const HomePage: FC<Props> = ({ data }) => {
   const { start, name, occupation, summary } = data[0];
-  const { secondSectionTitle, details } = data[1];
-  const { thirdSectionTitle, skills } = data[2];
+  const { secondSectionTitle, works } = data[1];
+  const { thirdSectionTitle, posts } = data[2];
+  const { invite, prompt } = data[3];
 
   return (
     <>
@@ -22,9 +30,11 @@ const HomePage: FC<Props> = ({ data }) => {
         occupation={occupation}
         summary={summary}
         secondSectionTitle={secondSectionTitle}
-        myDetails={details}
+        works={works}
         thirdSectionTitle={thirdSectionTitle}
-        skills={skills}
+        posts={posts}
+        invite={invite}
+        prompt={prompt}
       />
     </>
   );
@@ -35,18 +45,22 @@ export const getServerSideProps = async ({ req }: { req: NextApiRequest }) => {
     const protocol = process.env.PROTOCOL || "http";
     const host = req?.headers.host;
 
-    const [firstRes, secondRes, thirdRes] = await Promise.all([
+    const [firstRes, secondRes, thirdRes, fourthRes] = await Promise.all([
       fetch(`${protocol}://${host}/api/first_section`),
       fetch(`${protocol}://${host}/api/second_section`),
       fetch(`${protocol}://${host}/api/third_section`),
+      fetch(`${protocol}://${host}/api/fourth_section`),
     ]);
 
     const firstSection = await firstRes.json();
     const secondSection = await secondRes.json();
     const thirdSection = await thirdRes.json();
+    const fourthSection = await fourthRes.json();
+
     return {
+
       props: {
-        data: [firstSection.data, secondSection.data, thirdSection.data],
+        data: [firstSection.data, secondSection.data, thirdSection.data, fourthSection.data],
       },
     };
   } catch (error) {

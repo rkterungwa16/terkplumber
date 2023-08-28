@@ -25,6 +25,7 @@ html {
   --white: #ffffff;
   --milky-white: #fffdf9;
   --dark-green: #3b5856;
+  --lemon-green: #60BB46;
   --light-brown: #8f7f5f;
   --dark-grey: #788189;
   --darker-grey: #999999;
@@ -132,6 +133,10 @@ ul {
 
 .grey {
   color: var(--grey);
+}
+
+.lemon-green {
+  color: var(--lemon-green);
 }
 
 .red {
@@ -1111,8 +1116,7 @@ p,
   }
 }
 
-@media only screen and (min-width: 320px) {
-}
+
 /*
   Perform this action for screens > 480px (tablets)
 */
@@ -1228,7 +1232,7 @@ p,
 }
 
 /*
-  Perform this action for screens > 768px (small/large screens)
+  Perform this action for screens > 839px (small/large screens)
 */
 @media only screen and (min-width: 839px) {
   /*

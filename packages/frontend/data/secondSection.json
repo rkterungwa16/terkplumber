@@ -1,7 +1,41 @@
 {
-  "secondSectionTitle": "about me",
-  "details": [
-    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-  ]
+  "secondSectionTitle": "featured works",
+  "works": [
+    {
+      "icon": "/sampleLogo.jpg",
+      "title": "Media Disco",
+      "stack": ["React", "Next.js", "Node.js"],
+      "summary": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur"
+    },
+    {
+      "icon": "/sampleLogo.jpg",
+      "title": "iFit",
+      "stack": ["React", "Next.js", "Node.js"],
+      "summary": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur"
+    },
+    {
+      "icon": "/sampleLogo.jpg",
+      "title": "Lives and Livelihood",
+      "stack": ["React", "Next.js", "Node.js"],
+      "summary": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur"
+    },
+    {
+      "icon": "/sampleLogo.jpg",
+      "title": "Talent Garden",
+      "stack": ["React", "Next.js", "Node.js"],
+      "summary": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur"
+    },
+    {
+      "icon": "/sampleLogo.jpg",
+      "title": "IED Roma",
+      "stack": ["React", "Next.js", "Node.js"],
+      "summary": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur"
+    },
+    {
+      "icon": "/sampleLogo.jpg",
+      "title": "AWWWards Academy",
+      "stack": ["React", "Next.js", "Node.js"],
+      "summary": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur"
+    }
+]
 }
