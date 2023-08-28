@@ -1,23 +1,23 @@
-export default class MockIntersectionObserver {
-  readonly root: Element | null;
+// export default class MockIntersectionObserver {
+//   readonly root: Element | null;
 
-  readonly rootMargin: string;
+//   readonly rootMargin: string;
 
-  readonly thresholds: ReadonlyArray<number>;
+//   readonly thresholds: ReadonlyArray<number>;
 
-  constructor() {
-    this.root = null;
-    this.rootMargin = '';
-    this.thresholds = [];
-  }
+//   constructor() {
+//     this.root = null;
+//     this.rootMargin = '';
+//     this.thresholds = [];
+//   }
 
-  disconnect() {}
+//   disconnect() {}
 
-  observe() {}
+//   observe() {}
 
-  takeRecords(): IntersectionObserverEntry[] {
-    return [];
-  }
+//   takeRecords(): IntersectionObserverEntry[] {
+//     return [];
+//   }
 
-  unobserve() {}
-}
+//   unobserve() {}
+// }
