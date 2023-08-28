@@ -8,10 +8,12 @@ import { PageSection } from "@components/Page-Section";
 import { Button } from "@components/Button";
 import { SmIcons } from "@components/SM-Icons";
 import { ButtonColor, ButtonVariant } from "@components/Button/constants";
-import Card from "@components/Card";
+import WorkCard from "@components/Work-card";
+import PostCard from "@components/Post-card";
 
 import styles from "./styles.module.css";
-import { Skills, Works } from "types";
+import { Posts, Works } from "types";
+import { ClientRoutes } from "@routes/client";
 
 type Props = {
   summary?: string;
@@ -21,7 +23,10 @@ type Props = {
   secondSectionTitle?: string;
   thirdSectionTitle?: string;
   works?: Works[];
-  skills?: Skills[];
+  posts?: Posts[];
+  invite?: string;
+  prompt?: string;
+  invitation?: string;
 };
 export const Home: FC<Props> = ({
   summary,
@@ -30,7 +35,13 @@ export const Home: FC<Props> = ({
   occupation,
   secondSectionTitle,
   works,
+  thirdSectionTitle,
+  posts,
+  invite,
+  prompt,
+  invitation
 }) => {
+
   return (
     <Layout>
       <PageMain className="Trk__relative">
@@ -98,18 +109,79 @@ export const Home: FC<Props> = ({
         {/* Second section starts */}
         <PageSection className="Trk__flex Trk__direction--column Trk__pt--10">
 
-            <span
-              className={cx(styles["HomePage__second-section--title"], "grey Trk__capitalize font__weight--xbold Trk__pb--2")}
+            <div
+              className={cx(styles["HomePage__second-section--title"], "grey Trk__capitalize font__weight--xbold Trk__pb--4")}
               data-testid="sec2title-data"
               >
                 {secondSectionTitle}
-            </span>
-              <div className={styles["HomePage__second-section--works"]} data-testid="sec2works-data">
-                {works?.map((work, idx) => (
-                    <Card key={idx} work={work} />
-                ))}
+            </div>
+
+            <div className={styles["HomePage__second-section--works"]} data-testid="sec2works-data">
+              {works?.map((work, idx) => (
+                  <WorkCard key={idx} work={work} />
+              ))}
+            </div>
+
+        </PageSection>
+
+        {/* Third section starts */}
+        <PageSection className="Trk__flex Trk__direction--column Trk__pt--10">
+          <div className={cx(styles["HomePage__third-section--head"], "Trk__flex Trk__justify--between Trk__pb--4")}>
+            <div
+              className={cx(styles["HomePage__third-section--title"], "light-brown Trk__capitalize font__weight--xbold ")}
+              data-testid="sec3title-data"
+              >
+                {thirdSectionTitle}
+            </div>
+
+            <div className={cx(styles["HomePage__third-section--vall"], "Trk__dnone--sm ")}>
+              <Button
+                color={ButtonColor.PRIMARY}
+                variant={ButtonVariant.STANDARD}
+                href={ClientRoutes.blog}
+              >
+                view all posts
+              </Button>
+            </div>
+          </div>
+
+          {/* display three latest cards */}
+          <div className={cx(styles["HomePage__third-section--posts"], "")} data-testid="sec3posts-data">
+                  {posts?.sort((a, b) => a.id - b.id).map(post=> (
+                    <PostCard key={post.id} post={post} />
+                  )).slice(-3)}
+          </div>
+
+          <div className={cx(styles["HomePage__third-section--vall"], "Trk__dnone Trk__dflex--sm Trk__mt--10 Trk__mb--10")}>
+              <Button
+                color={ButtonColor.PRIMARY}
+                variant={ButtonVariant.STANDARD}
+                href={ClientRoutes.blog}
+              >
+                view all posts
+              </Button>
+          </div>
+        </PageSection>
+
+        {/* Fourth section starts */}
+        <PageSection className="Trk__flex Trk__direction--column Trk__pt--10 Trk__dnone--sm">
+            <div className={cx(styles["HomePage__fourth-section--wrapper"], "Trk__flex Trk__direction--column Trk__align--center Trk__pb--4")}>
+
+              <p className="grey Trk__capitalize" data-testid="sec4invite-data">{invite}</p>
+
+              <span className="lemon-green Trk__capitalize font__weight--bold Trk__mt--2" data-testid="sec4prompt-data">{prompt}</span>
+
+              <div className={cx(styles["HomePage__fourth-section--hireme"], "Trk__mt--6 Trk__mb--8")}>
+                <Button
+                    color={ButtonColor.PRIMARY}
+                    variant={ButtonVariant.STANDARD}
+                    href={ClientRoutes.contact}
+                    >
+                    Hire me
+                </Button>
               </div>
 
+            </div>
         </PageSection>
       </PageMain>
     </Layout>

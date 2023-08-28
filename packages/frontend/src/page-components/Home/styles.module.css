@@ -21,9 +21,9 @@
   min-width: 100%;
 }
 
-.HomePage__second-section--title{
+.HomePage__second-section--title,
+.HomePage__third-section--title{
   font-size: 2rem;
-  margin-bottom: 2rem;
 }
 
 .HomePage__second-section--works{
@@ -33,11 +33,64 @@
   gap: 1rem;
 }
 
+.HomePage__second-section--works > div:first-child {
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.HomePage__second-section--works > div:last-child {
+  border-radius: 0 0 0.625rem 0.625rem;
+}
+
+.HomePage__third-section--head {
+  width: inherit;
+}
+
+.HomePage__third-section--vall {
+  align-self: center;
+}
+
+.HomePage__third-section--posts{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.HomePage__fourth-section--wrapper > p{
+  font-size: 1.5rem;
+}
+
+.HomePage__fourth-section--wrapper > span{
+  font-size: 2rem;
+}
+
+
 @media only screen and (min-width: 600px) {
 
   .HomePage__second-section--works {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .HomePage__second-section--works > div:first-child {
+    border-radius: 0.625rem 0 0 0;
+  }
+
+  .HomePage__second-section--works > div:nth-child(2){
+    border-radius: 0 0.625rem 0 0;
+  }
+
+  .HomePage__second-section--works > div:nth-last-child(2){
+    border-radius:0 0 0 0.625rem;
+  }
+
+  .HomePage__second-section--works > div:last-child {
+    border-radius: 0 0 0.625rem 0;
+  }
+
+  .HomePage__third-section--posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 @media only screen and (min-width: 1361px) {
@@ -72,47 +125,33 @@
   .HomePage__second-section--works{
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .HomePage__second-section--works > div:first-child {
+    border-radius: 0.625rem 0 0 0;
+  }
+  .HomePage__second-section--works > div:nth-child(2){
+    border-radius: 0;
+  }
+
+  .HomePage__second-section--works > div:nth-child(3){
+    border-radius: 0 0.625rem 0 0;
+  }
+
+  .HomePage__second-section--works > div:nth-last-child(2){
+    border-radius: 0;
+  }
+
+  .HomePage__second-section--works > div:nth-last-child(3){
+    border-radius:0 0 0 0.625rem;
+  }
+
+  .HomePage__second-section--works > div:last-child {
+    border-radius: 0 0 0.625rem 0;
+  }
+
+  .HomePage__third-section--posts{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
 }
-/* @media only screen and (max-width: 768px) {
-  .HomePage__about-me {
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-  }
-} */
 
-
-/*
-  Perform this action for screens < 480px (mobile)
-*/
-/* @media only screen and (max-width: 480px) {
-
-  .HomePage__first-intro span {
-    font-size: 2rem;
-  }
-
-  .HomePage__line-brush img {
-    width: 75%;
-  }
-
-  .HomePage__get-resume {
-    align-self: center;
-  }
-
-
-
-} */
-
-/*
-  Perform this action for screens >= 480px (tablet)
-*/
-/* @media only screen and (min-width: 480px) and (max-width: 1024px) {
-
-  .HomePage__line-brush {
-    width: 75%;
-  }
-
-  .HomePage__get-resume {
-    align-self: center;
-  }
-} */

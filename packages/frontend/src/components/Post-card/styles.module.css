@@ -1,0 +1,67 @@
+.PostCard__container{
+  border: 1px solid var(--lighter-grey);
+  width: 100%;
+  height: auto;
+  background-color: var(--white);
+  /* margin-bottom: 4px; */
+}
+
+.PostCard__image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 13.063rem;
+  margin-bottom: 1rem;
+}
+
+.PostCard__middle{
+  padding: 1rem .8rem 0 .8rem;
+}
+
+.PostCard__middle--left-avatar{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.PostCard__middle--left-info span:nth-child(1),
+.PostCard__middle--left-info span:nth-child(2){
+ font-size: 0.78rem;
+}
+
+.PostCard__middle span{
+  font-size: 0.78rem;
+}
+
+.PostCard__foot{
+  padding: 1rem .8rem 2rem .8rem;
+}
+
+.PostCard__foot span{
+  font-size: 1.174rem;
+}
+
+.PostCard__foot p{
+  font-size: 0.783rem;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 600px) {
+  .PostCard__container{
+
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .PostCard__container{
+
+  }
+}
