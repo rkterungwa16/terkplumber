@@ -8,10 +8,10 @@ import { PageSection } from "@components/Page-Section";
 import { Button } from "@components/Button";
 import { SmIcons } from "@components/SM-Icons";
 import { ButtonColor, ButtonVariant } from "@components/Button/constants";
-import Card from "@components/Card";
+import WorkCard from "@components/Work-card";
 
 import styles from "./styles.module.css";
-import { Skills, Works } from "types";
+import { Works } from "types";
 
 type Props = {
   summary?: string;
@@ -21,7 +21,6 @@ type Props = {
   secondSectionTitle?: string;
   thirdSectionTitle?: string;
   works?: Works[];
-  skills?: Skills[];
 };
 export const Home: FC<Props> = ({
   summary,
@@ -29,7 +28,7 @@ export const Home: FC<Props> = ({
   name,
   occupation,
   secondSectionTitle,
-  works,
+  works
 }) => {
   return (
     <Layout>
@@ -96,19 +95,20 @@ export const Home: FC<Props> = ({
         </PageSection>
 
         {/* Second section starts */}
-        <PageSection className="Trk__flex Trk__direction--column Trk__pt--10">
+        <PageSection className="Trk__flex Trk__direction--column ">
 
-            <span
-              className={cx(styles["HomePage__second-section--title"], "grey Trk__capitalize font__weight--xbold Trk__pb--2")}
+            <div
+              className={cx(styles["HomePage__second-section--title"], "grey Trk__capitalize font__weight--xbold Trk__pb--4")}
               data-testid="sec2title-data"
               >
                 {secondSectionTitle}
-            </span>
-              <div className={styles["HomePage__second-section--works"]} data-testid="sec2works-data">
-                {works?.map((work, idx) => (
-                    <Card key={idx} work={work} />
-                ))}
-              </div>
+            </div>
+
+            <div className={cx(styles["HomePage__second-section--works"], "Trk__pb--10")} data-testid="sec2works-data">
+              {works?.map((work, idx) => (
+                  <WorkCard key={idx} work={work} />
+              ))}
+            </div>
 
         </PageSection>
       </PageMain>
