@@ -36,26 +36,26 @@ export const Home: FC<Props> = ({
         <SmIcons />
         <PageSection className="Trk__flex Trk__direction--column Trk__pt--10">
           <div className={cx(styles['HomePage__first-intro'], "font__weight--xbold")}>
-            <span
+            <h2
               className="black Trk__capitalize font__weight--xbold"
               data-testid="start-data"
             >
               {start}
-            </span>
+            </h2>
             <br />
-            <span
+            <h1
               className="light-brown Trk__capitalize font__weight--xbold"
               data-testid="name-data"
             >
               {name}
-            </span>
+            </h1>
             <br />
-            <span
+            <h3
               className="grey Trk__capitalize font__weight--xbold"
               data-testid="oc-data"
             >
               {occupation}
-            </span>
+            </h3>
           </div>
           <div
             className={cx(
@@ -104,7 +104,7 @@ export const Home: FC<Props> = ({
                 {secondSectionTitle}
             </div>
 
-            <div className={cx(styles["HomePage__second-section--works"], "Trk__pb--10")} data-testid="sec2works-data">
+            <div className={cx(styles["HomePage__second-section--works"], "Trk__pb--10 Trk__mr--2")} data-testid="sec2works-data">
               {works?.map((work, idx) => (
                   <WorkCard key={idx} work={work} />
               ))}

@@ -1,12 +1,15 @@
-.first__intro p span {
+.HomePage__first-intro span {
+  /* font-size: 7.7vw; */
+}
+
+/* .first__intro p span {
   text-transform: capitalize;
 }
 .HomePage__line-brush {
   width: 85%;
-}
+} */
 
 .HomePage__line-brush img {
-  width: 100%;
   object-fit: contain;
   object-position: 80% 20%;
 }
@@ -26,7 +29,7 @@
 
 .HomePage__second-section--works{
   max-width: 1200px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);

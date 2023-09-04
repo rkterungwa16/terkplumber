@@ -20,7 +20,7 @@ export const PageHeader = () => {
     setMenu(!menuIsActive);
   };
   return (
-    // <div className={cx(styles["Page__header--wrapper"])}>
+    <div className={cx(styles["Page__header--wrapper"])}>
       <Header className={cx(styles.Page__header, "bg-milky-white ")}>
         <Nav
           className="Trk__dnone--md Trk__absolute--sm Trk__left--3"
@@ -83,6 +83,6 @@ export const PageHeader = () => {
           </IconButton>
         </Nav>
       </Header>
-    // </div>
+    </div>
   );
 };
