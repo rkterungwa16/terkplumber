@@ -35,8 +35,7 @@ export const PageHeader = () => {
             />
           </IconButton>
         </Nav>
-        {/* <Nav className="Trk__dflex--sm Trk__justify-center--sm Trk__width-max--sm "> */}
-        <Nav className="">
+        <Nav className="Trk__dflex--sm Trk__justify-center--sm Trk__width-max--sm ">
           <CustomLink component={Link} href={ClientRoutes.home}>
             <Image width={117} height={42} src="/logo.png" alt="Logo" />
           </CustomLink>
