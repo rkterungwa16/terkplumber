@@ -11,7 +11,9 @@ import { ButtonColor, ButtonVariant } from "@components/Button/constants";
 import WorkCard from "@components/Work-card";
 
 import styles from "./styles.module.css";
-import { Works } from "types";
+import { Works, Posts } from "types";
+import { ClientRoutes } from "@routes/client";
+import PostCard from "@components/Post-card";
 
 type Props = {
   summary?: string;
@@ -19,8 +21,11 @@ type Props = {
   name?: string;
   occupation?: string;
   secondSectionTitle?: string;
-  thirdSectionTitle?: string;
   works?: Works[];
+  thirdSectionTitle?: string;
+  posts?: Posts[];
+  invite?: string;
+  prompt?: string;
 };
 export const Home: FC<Props> = ({
   summary,
@@ -28,7 +33,11 @@ export const Home: FC<Props> = ({
   name,
   occupation,
   secondSectionTitle,
-  works
+  works,
+  thirdSectionTitle,
+  posts,
+  invite,
+  prompt
 }) => {
   return (
     <Layout>
@@ -110,6 +119,66 @@ export const Home: FC<Props> = ({
               ))}
             </div>
 
+        </PageSection>
+
+        {/* Third section starts */}
+        <PageSection className="Trk__flex Trk__direction--column Trk__pt--10">
+          <div className={cx(styles["HomePage__third-section--head"], "Trk__flex Trk__justify--between Trk__pb--4 ")}>
+            <div
+              className={cx(styles["HomePage__third-section--title"], "light-brown Trk__capitalize font__weight--xbold ")}
+              data-testid="sec3title-data"
+              >
+                {thirdSectionTitle}
+            </div>
+
+            <div className={cx(styles["HomePage__third-section--vall"], "Trk__dnone--sm Trk__mr--2")}>
+              <Button
+                color={ButtonColor.PRIMARY}
+                variant={ButtonVariant.STANDARD}
+                href={ClientRoutes.blog}
+              >
+                view all posts
+              </Button>
+            </div>
+          </div>
+
+          {/* display three latest cards */}
+          <div className={cx(styles["HomePage__third-section--posts"], "Trk__mr--2")} data-testid="sec3posts-data">
+                  {posts?.sort((a, b) => a.id - b.id).map(post=> (
+                    <PostCard key={post.id} post={post} />
+                  )).slice(-3)}
+          </div>
+
+          <div className={cx(styles["HomePage__third-section--vall"], "Trk__dnone Trk__dflex--sm Trk__mt--10 Trk__mb--10")}>
+              <Button
+                color={ButtonColor.PRIMARY}
+                variant={ButtonVariant.STANDARD}
+                href={ClientRoutes.blog}
+              >
+                view all posts
+              </Button>
+          </div>
+        </PageSection>
+
+         {/* Fourth section starts */}
+         <PageSection className="Trk__flex Trk__direction--column Trk__pt--10 Trk__dnone--sm">
+            <div className={cx(styles["HomePage__fourth-section--wrapper"], "Trk__flex Trk__direction--column Trk__align--center Trk__pb--4")}>
+
+              <p className="grey Trk__capitalize" data-testid="sec4invite-data">{invite}</p>
+
+              <span className="lemon-green Trk__capitalize font__weight--bold Trk__mt--2" data-testid="sec4prompt-data">{prompt}</span>
+
+              <div className={cx(styles["HomePage__fourth-section--hireme"], "Trk__mt--6 Trk__mb--8")}>
+                <Button
+                    color={ButtonColor.PRIMARY}
+                    variant={ButtonVariant.STANDARD}
+                    href={ClientRoutes.contact}
+                    >
+                    Hire me
+                </Button>
+              </div>
+
+            </div>
         </PageSection>
       </PageMain>
     </Layout>

@@ -23,7 +23,8 @@
   line-height: 1.3rem;
 }
 
-.HomePage__second-section--title{
+.HomePage__second-section--title,
+.HomePage__third-section--title{
   font-size: 2rem;
 }
 
@@ -56,6 +57,29 @@
 
 .HomePage__second-section--works > div:last-child {
   border-radius: 0 0 0.625rem 0;
+}
+
+.HomePage__third-section--head {
+  width: inherit;
+}
+
+.HomePage__third-section--vall {
+  align-self: center;
+}
+
+.HomePage__third-section--posts{
+  max-width: 1200px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.HomePage__fourth-section--wrapper > p{
+  font-size: 1.5rem;
+}
+
+.HomePage__fourth-section--wrapper > span{
+  font-size: 2rem;
 }
 
 
@@ -190,7 +214,9 @@
     border-radius: 0 0 0.625rem 0.625rem;
   }
 
-
+  .HomePage__third-section--posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
 }
 
@@ -239,6 +265,10 @@
 
   .HomePage__second-section--works > div:last-child {
     border-radius: 0 0 0.625rem 0;
+  }
+
+  .HomePage__third-section--posts {
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
