@@ -1,0 +1,36 @@
+
+.WorkCard__container{
+  border: 1px solid var(--lighter-grey);
+  width: 100%;
+  height: auto;
+  padding: 1rem 1rem;
+  background-color: var(--white);
+}
+
+.WorkCard__logo {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 18%;
+  margin-bottom: 1rem;
+}
+
+.WorkCard__container p {
+  font-size: 0.875rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+
+
+/* @media only screen and (min-width: 1024px){
+  .card__container {
+    width: 100%;
+  }
+
+} */

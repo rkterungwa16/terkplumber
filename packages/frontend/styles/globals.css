@@ -25,6 +25,7 @@ html {
   --white: #ffffff;
   --milky-white: #fffdf9;
   --dark-green: #3b5856;
+  --lemon-green: #60BB46;
   --light-brown: #8f7f5f;
   --dark-grey: #788189;
   --darker-grey: #999999;
@@ -156,6 +157,10 @@ ul {
 
 .white {
   color: var(--white);
+}
+
+.lemon-green {
+  color: var(--lemon-green);
 }
 
 .dark-green {
