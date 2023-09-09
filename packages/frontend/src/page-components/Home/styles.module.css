@@ -190,6 +190,7 @@
 
   .HomePage__second-section--works{
     grid-template-columns: repeat(1, 1fr);
+    margin-right: 0;
   }
 
   .HomePage__second-section--works > div:first-child {
@@ -217,6 +218,7 @@
 
   .HomePage__third-section--posts {
     grid-template-columns: repeat(1, 1fr);
+    margin-right: 0;
   }
 
 }
