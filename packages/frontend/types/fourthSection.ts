@@ -1,4 +1,5 @@
 export type FourthSection = {
-  invite: string;
+  inviteOne: string;
+  inviteTwo: string;
   prompt: string;
 }

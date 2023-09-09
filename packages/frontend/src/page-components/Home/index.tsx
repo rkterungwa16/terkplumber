@@ -24,7 +24,8 @@ type Props = {
   works?: Works[];
   thirdSectionTitle?: string;
   posts?: Posts[];
-  invite?: string;
+  inviteOne?: string;
+  inviteTwo?: string;
   prompt?: string;
 };
 export const Home: FC<Props> = ({
@@ -36,7 +37,8 @@ export const Home: FC<Props> = ({
   works,
   thirdSectionTitle,
   posts,
-  invite,
+  inviteOne,
+  inviteTwo,
   prompt
 }) => {
   return (
@@ -164,7 +166,15 @@ export const Home: FC<Props> = ({
          <PageSection className="Trk__flex Trk__direction--column Trk__pt--10">
             <div className={cx(styles["HomePage__fourth-section--wrapper"], "Trk__flex Trk__direction--column Trk__align--center Trk__pb--4")}>
 
-              <p className="grey Trk__capitalize" data-testid="sec4invite-data">{invite}</p>
+              <div className="Trk__flex Trk__direction--row Trk__dnone--sm ">
+                <p className="grey Trk__capitalize" data-testid="sec4inviteOne-data">{inviteOne}</p>
+                <p className="grey Trk__capitalize" data-testid="sec4inviteTwo-data">{inviteTwo}</p>
+              </div>
+
+              <div className="Trk__dflex--sm Trk__direction--column Trk__align--center Trk__dnone">
+                <p className="grey Trk__capitalize" data-testid="sec4inviteOne-data">{inviteOne}</p>
+                <p className="grey Trk__capitalize" data-testid="sec4inviteTwo-data">{inviteTwo}</p>
+              </div>
 
               <span className="lemon-green Trk__capitalize font__weight--bold Trk__mt--2" data-testid="sec4prompt-data">{prompt}</span>
 

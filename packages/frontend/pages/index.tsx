@@ -13,7 +13,7 @@ const HomePage: FC<Props> = ({ data }) => {
   const { start, name, occupation, summary } = data[0];
   const { secondSectionTitle, works } = data[1];
   const { thirdSectionTitle, posts } = data[2];
-  const { invite, prompt } = data[3];
+  const { inviteOne, inviteTwo, prompt } = data[3];
 
   return (
     <>
@@ -26,7 +26,8 @@ const HomePage: FC<Props> = ({ data }) => {
         works={works}
         thirdSectionTitle={thirdSectionTitle}
         posts={posts}
-        invite={invite}
+        inviteOne={inviteOne}
+        inviteTwo={inviteTwo}
         prompt={prompt}
       />
     </>
