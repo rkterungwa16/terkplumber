@@ -74,7 +74,7 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.HomePage__fourth-section--wrapper > p{
+.HomePage__fourth-section--wrapper > div > p{
   font-size: 1.5rem;
 }
 
