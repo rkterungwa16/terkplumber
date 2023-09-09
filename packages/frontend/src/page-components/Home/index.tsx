@@ -176,9 +176,9 @@ export const Home: FC<Props> = ({
                 <p className="grey Trk__capitalize" data-testid="sec4inviteTwo-data">{inviteTwo}</p>
               </div>
 
-              <span className="lemon-green Trk__capitalize font__weight--bold Trk__mt--2" data-testid="sec4prompt-data">{prompt}</span>
+              <span className="lemon-green Trk__capitalize font__weight--bold Trk__mt--4 Trk__mb--4" data-testid="sec4prompt-data">{prompt}</span>
 
-              <div className={cx(styles["HomePage__fourth-section--hireme"], "Trk__mt--6 Trk__mb--8")}>
+              <div className={cx(styles["HomePage__fourth-section--hireme"], " Trk__mb--8")}>
                 <Button
                     color={ButtonColor.PRIMARY}
                     variant={ButtonVariant.STANDARD}
