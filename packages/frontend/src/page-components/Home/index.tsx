@@ -161,7 +161,7 @@ export const Home: FC<Props> = ({
         </PageSection>
 
          {/* Fourth section starts */}
-         <PageSection className="Trk__flex Trk__direction--column Trk__pt--10 Trk__dnone--sm">
+         <PageSection className="Trk__flex Trk__direction--column Trk__pt--10">
             <div className={cx(styles["HomePage__fourth-section--wrapper"], "Trk__flex Trk__direction--column Trk__align--center Trk__pb--4")}>
 
               <p className="grey Trk__capitalize" data-testid="sec4invite-data">{invite}</p>
