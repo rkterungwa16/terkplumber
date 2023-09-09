@@ -167,7 +167,7 @@ export const Home: FC<Props> = ({
             <div className={cx(styles["HomePage__fourth-section--wrapper"], "Trk__flex Trk__direction--column Trk__align--center Trk__pb--4")}>
 
               <div className="Trk__flex Trk__direction--row Trk__dnone--sm ">
-                <p className="grey Trk__capitalize" data-testid="sec4inviteOne-data">{inviteOne}</p>
+                <p className="grey Trk__capitalize Trk__mr--1" data-testid="sec4inviteOne-data">{inviteOne}</p>
                 <p className="grey Trk__capitalize" data-testid="sec4inviteTwo-data">{inviteTwo}</p>
               </div>
 
