@@ -115,7 +115,7 @@ export const Home: FC<Props> = ({
                 {secondSectionTitle}
             </div>
 
-            <div className={cx(styles["HomePage__second-section--works"], "Trk__pb--10 Trk__mr--2")} data-testid="sec2works-data">
+            <div className={cx(styles["HomePage__second-section--works"], "Trk__pb--10 ")} data-testid="sec2works-data">
               {works?.map((work, idx) => (
                   <WorkCard key={idx} work={work} />
               ))}
@@ -145,7 +145,7 @@ export const Home: FC<Props> = ({
           </div>
 
           {/* display three latest cards */}
-          <div className={cx(styles["HomePage__third-section--posts"], "Trk__mr--2")} data-testid="sec3posts-data">
+          <div className={cx(styles["HomePage__third-section--posts"], "")} data-testid="sec3posts-data">
                   {posts?.sort((a, b) => a.id - b.id).map(post=> (
                     <PostCard key={post.id} post={post} />
                   )).slice(-3)}
@@ -187,7 +187,6 @@ export const Home: FC<Props> = ({
                     Hire me
                 </Button>
               </div>
-
             </div>
         </PageSection>
       </PageMain>

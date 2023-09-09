@@ -34,6 +34,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
+  margin-right: 0.5rem;
 }
 
 .HomePage__second-section--works > div:first-child {
@@ -72,6 +73,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
+  margin-right: 0.5rem;
 }
 
 .HomePage__fourth-section--wrapper > div > p{
@@ -188,7 +190,6 @@
 
   .HomePage__second-section--works{
     grid-template-columns: repeat(1, 1fr);
-
   }
 
   .HomePage__second-section--works > div:first-child {
