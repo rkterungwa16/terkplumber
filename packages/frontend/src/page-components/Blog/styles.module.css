@@ -1,0 +1,37 @@
+.BlogPage__description {
+  font-size: 5rem;
+}
+
+.BlogPage__subdescription {
+  font-size: 1.9rem;
+}
+
+/*
+  Perform this action for screens < 480px (mobile)
+*/
+@media only screen and (max-width: 480px) {
+  .BlogPage__description {
+    font-size: 2rem;
+  }
+
+  .BlogPage__subdescription {
+    font-size: 1.2rem;
+  }
+
+
+}
+
+/*
+  Perform this action for screens >= 480px (tablet)
+*/
+@media only screen and (min-width: 480px) and (max-width: 839px) {
+  /* .BlogPage__description {
+    font-size: 3rem;
+  }
+
+  .BlogPage__subdescription {
+    font-size: 1.9rem;
+  } */
+
+}
+
